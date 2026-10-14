@@ -27,3 +27,5 @@ World-class redesign of https://sozoloveland.com/ — a modern, fast, mobile-res
 Static site — deploy `index.html` to any static host (Vercel, Netlify, etc.).
 
 Linear: PLX-382
+
+<!-- Redeploy trigger 2026-10-14: clean HTML/CSS/JS (base64 fix ff034d1) + visit.html live -->
