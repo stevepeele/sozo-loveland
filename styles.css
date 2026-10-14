@@ -585,3 +585,94 @@ h1, h2 { font-family: var(--serif); font-weight: 560; letter-spacing: -0.015em; 
   .porch-hero-bg img, .venue-hero-bg img { animation: none; }
   .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
+
+/* ============================================================
+   MAGIC — interactive layer (PLX-449)
+   Command palette, fit quiz, live ticker, connect composer
+   ============================================================ */
+
+/* ---------- command palette ---------- */
+.pal-pill {
+  position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 90;
+  display: flex; align-items: center; gap: .55rem;
+  background: var(--ink); color: var(--cream);
+  border: 1px solid rgba(232,160,76,.35); border-radius: 999px;
+  padding: .7rem 1.15rem; font: 600 .9rem var(--sans); cursor: pointer;
+  box-shadow: 0 18px 40px -18px rgba(20,12,6,.6);
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease);
+}
+.pal-pill:hover { transform: translateY(-2px); box-shadow: 0 24px 48px -18px rgba(20,12,6,.65); }
+.pal-pill-k { background: rgba(232,160,76,.2); color: var(--ember); border-radius: 6px; padding: .15rem .45rem; font-size: .78rem; }
+.pal-overlay {
+  position: fixed; inset: 0; z-index: 100; display: none;
+  background: rgba(24,15,7,.55); backdrop-filter: blur(6px);
+  padding: 12vh 1rem 1rem; align-items: flex-start; justify-content: center;
+}
+.pal-overlay.show { display: flex; animation: porchIn .25s ease-out both; }
+.pal-box {
+  width: min(38rem, 100%); background: var(--white);
+  border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+  box-shadow: 0 40px 90px -30px rgba(20,12,6,.55);
+}
+.pal-head { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.3rem .6rem; }
+.pal-title { font-family: var(--serif); font-size: 1.25rem; }
+.pal-hint { font-size: .75rem; color: var(--muted); }
+.pal-input {
+  width: calc(100% - 2.6rem); margin: 0 1.3rem; padding: .85rem 1.1rem;
+  border: 1px solid var(--line); border-radius: 12px; font: inherit;
+  background: var(--cream); color: var(--ink);
+}
+.pal-input:focus { outline: 2px solid var(--amber); border-color: var(--amber); }
+.pal-list { max-height: 19rem; overflow-y: auto; padding: .8rem; }
+.pal-row { display: block; padding: .8rem 1rem; border-radius: 12px; text-decoration: none; color: var(--ink); }
+.pal-row.sel, .pal-row:hover { background: var(--cream-2); }
+.pal-row-t { display: block; font-weight: 600; }
+.pal-row-d { display: block; font-size: .85rem; color: var(--muted); }
+.pal-empty { padding: 1.4rem; text-align: center; color: var(--muted); }
+
+/* ---------- live ticker ---------- */
+.live-ticker {
+  background: #1d130b; color: #f3e9d6;
+  border-top: 1px solid rgba(232,160,76,.25); border-bottom: 1px solid rgba(232,160,76,.25);
+}
+.live-ticker .wrap {
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  padding-top: .8rem; padding-bottom: .8rem; font-size: .92rem;
+}
+.tick-live { display: flex; align-items: center; gap: .45rem; font-weight: 700; font-size: .78rem; letter-spacing: .14em; color: var(--ember); }
+.tick-dot { width: .55rem; height: .55rem; border-radius: 50%; background: var(--ember); animation: tickPulse 1.6s ease-in-out infinite; }
+@keyframes tickPulse { 0%,100% { opacity: 1; transform: scale(1);} 50% { opacity: .45; transform: scale(.8);} }
+.tick-count { color: var(--ember); font-variant-numeric: tabular-nums; }
+.tick-sep { color: rgba(232,160,76,.5); }
+.tick-ev { color: #d9c8ab; }
+.tick-cta { margin-left: auto; color: var(--ember); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.tick-cta:hover { text-decoration: underline; }
+
+/* ---------- fit quiz ---------- */
+.fit-wrap { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 2.4rem; margin-top: 2rem; box-shadow: 0 24px 60px -40px rgba(60,40,15,.35); }
+.fit-q { font-family: var(--serif); font-size: 1.6rem; margin-bottom: 1.2rem; }
+.fit-opts { display: flex; flex-wrap: wrap; gap: .7rem; }
+.fit-opt { font-size: .95rem; padding: .7rem 1.2rem; }
+.fit-opt:hover { border-color: var(--amber); color: var(--amber-deep); }
+.fit-back { background: none; border: none; color: var(--muted); font: 600 .85rem var(--sans); cursor: pointer; margin-top: 1.4rem; padding: 0; }
+.fit-back:hover { color: var(--amber-deep); }
+.fit-steps { display: grid; gap: .8rem; margin: 1.4rem 0 .4rem; }
+.fit-step { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem; border: 1px solid var(--line); border-radius: 14px; text-decoration: none; color: var(--ink); background: var(--cream); transition: transform .15s var(--ease), box-shadow .15s var(--ease); }
+.fit-step:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -20px rgba(60,40,15,.4); }
+.fit-step strong { font-size: 1.02rem; }
+.fit-step small { color: var(--ink-soft); }
+.fit-step .go { margin-left: auto; color: var(--amber-deep); font-weight: 700; }
+
+/* ---------- connect composer ---------- */
+.comp-tabs { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.4rem; }
+.comp-active { background: var(--ink) !important; color: var(--cream) !important; border-color: var(--ink) !important; }
+.comp-body textarea { width: 100%; padding: .8rem 1rem; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: var(--cream); color: var(--ink); resize: vertical; }
+.comp-receipt { animation: porchIn .6s ease-out both; }
+.comp-receipt h3 { font-family: var(--serif); font-size: 1.5rem; }
+.comp-quote { border-left: 3px solid var(--amber); padding-left: 1rem; color: var(--ink-soft); font-style: italic; }
+
+@media (max-width: 860px) {
+  .fit-wrap { padding: 1.6rem; }
+  .tick-cta { margin-left: 0; }
+  .pal-pill { right: .9rem; bottom: .9rem; }
+}
