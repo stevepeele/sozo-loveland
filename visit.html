@@ -11,13 +11,12 @@
   <meta property="og:image" content="assets/interior-1.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,560;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/sozo-logo.jpg">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="preview-banner" role="note">PREVIEW ONLY &mdash; staging review build, not the live church website.</div>
   <header class="site-header">
     <div class="wrap nav-bar">
       <a class="brand" href="index.html">
@@ -29,14 +28,11 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="visit.html" aria-current="page">Visit</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="leadership.html">Leadership</a></li>
-          <li><a href="ministries.html">Ministries</a></li>
           <li><a href="sermons.html">Messages</a></li>
-          <li><a href="watch.html">Watch</a></li>
+          <li><a href="ministries.html">Ministries</a></li>
+          <li><a href="venue.html">The Venue</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="give.html">Give</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li><a href="visit.html" class="nav-cta">Plan Your Visit</a></li>
         </ul>
       </nav>
@@ -48,25 +44,60 @@
       <div class="wrap">
         <p class="eyebrow">Plan Your Visit</p>
         <h1>Come to SOZO.</h1>
-        <p class="lede" style="max-width:42rem">Welcome to an experience with God that promises to meet every need, answer every question, and fix everything that is broken. That is the SOZO life — and we want to walk it with you.</p>
+        <p class="lede" style="max-width:42rem">Welcome to an experience with God that promises to meet every need, answer every question, and fix everything that is broken. That is the SOZO life &mdash; and we want to walk it with you.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap split">
-        <div>
-          <p class="eyebrow">What&rsquo;s Important to Us</p>
-          <h2>Teaching the Word of God is the heart of this ministry.</h2>
-          <p>That&rsquo;s reflected in our practical Sunday messages and classes. We believe God wants us to go deeper in scripture — to be nourished on meat, not just milk.</p>
-          <p>We value worship through anointed music and praise — not only on Sundays, but as a priority in every area of our daily lives.</p>
-          <p>We seek the presence and ministry of the Holy Spirit, and we encourage the exercise and development of spiritual gifts in the lives of believers.</p>
-          <p>And family marks this ministry in a distinguishing way. As born-again believers we are all part of the same family — and God created us in His image regardless of nationality, race, language, tribe, or nation. The ethnic diversity of our congregation is a testimony to that truth.</p>
+    <section class="section" style="padding-top:3rem">
+      <div class="wrap">
+        <p class="eyebrow">Your Personal Plan</p>
+        <h2 style="max-width:36rem">Tell us who&rsquo;s coming. We&rsquo;ll handle the rest.</h2>
+        <p class="section-lede">Three quick answers and we&rsquo;ll build your Sunday &mdash; where to park, where to go, and who&rsquo;ll be looking for you.</p>
+        <div class="concierge">
+          <div class="concierge-grid">
+            <div class="field">
+              <label for="c-date">Which Sunday?</label>
+              <input id="c-date" type="date">
+            </div>
+            <div class="field">
+              <label for="c-adults">Adults coming</label>
+              <select id="c-adults">
+                <option>1 adult</option>
+                <option selected>2 adults</option>
+                <option>3 adults</option>
+                <option>4+ adults</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label>Bringing kids? Tap their ages</label>
+            <div class="chip-row" id="c-kids">
+              <button type="button" class="chip" aria-pressed="false">Baby&ndash;2</button>
+              <button type="button" class="chip" aria-pressed="false">Ages 3&ndash;5</button>
+              <button type="button" class="chip" aria-pressed="false">Grades 1&ndash;3</button>
+              <button type="button" class="chip" aria-pressed="false">Grades 4&ndash;6</button>
+              <button type="button" class="chip" aria-pressed="false">Students 7&ndash;12</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="c-name">Your name</label>
+            <input id="c-name" type="text" placeholder="So we know who to look for">
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-primary" id="c-submit" type="button">Build my Sunday &rarr;</button>
+          </div>
+          <div class="plan-result" id="c-result" aria-live="polite">
+            <h4 id="c-title">Your Sunday, planned:</h4>
+            <ol id="c-plan"></ol>
+            <div class="btn-row">
+              <a class="btn btn-dark" href="contact.html">Let us know you&rsquo;re coming &rarr;</a>
+            </div>
+          </div>
         </div>
-        <div class="feature-img"><img src="assets/interior-2.jpg" alt="A room with a view — inside SOZO Loveland" loading="lazy"></div>
       </div>
     </section>
 
-    <section class="section" style="background:var(--cream-2)">
+    <section class="section" id="expect" style="background:var(--cream-2);scroll-margin-top:5rem">
       <div class="wrap">
         <p class="eyebrow">Your First Sunday</p>
         <h2 style="max-width:36rem">Three easy steps.</h2>
@@ -79,7 +110,7 @@
           <div class="card">
             <span class="num">02</span>
             <h3>Check In Your Kids</h3>
-            <p>SOZO Kids check-in opens at <strong>10:15 AM</strong>. Just head to the SOZO Kids check-in room — our team will help you every step.</p>
+            <p>SOZO Kids check-in opens at <strong>10:15 AM</strong>. Just head to the SOZO Kids check-in room &mdash; our team will help you every step.</p>
           </div>
           <div class="card">
             <span class="num">03</span>
@@ -100,13 +131,9 @@
             <div class="faq-item"><h3>What time should I come?</h3><p>Bible study starts at <strong>9:00 AM</strong>; the main service runs <strong>10AM&ndash;12PM</strong>. SOZO Kids check-in opens at 10:15 AM &mdash; come a few minutes early your first time.</p></div>
             <div class="faq-item"><h3>Where do I park?</h3><p>Right at the building &mdash; 9781 Fields Ertel Rd, Loveland. Plenty of parking, and our hospitality team will guide you from the lot to the door.</p></div>
             <div class="faq-item"><h3>What do I wear?</h3><p>Whatever you&rsquo;re comfortable in. You&rsquo;ll see everything from jeans to Sunday best.</p></div>
-            <div class="faq-item"><h3>What about my kids?</h3><p>SOZO Kids is a vibrant, Bible-based ministry from nursery (birth&ndash;age 2) through Jungle House (1st&ndash;6th grade). Check-in starts at 10:15 AM.</p></div>
+            <div class="faq-item"><h3>What about my kids?</h3><p>SOZO Kids is a vibrant, Bible-based ministry from nursery (birth&ndash;age 2) through 6th grade. Check-in starts at 10:15 AM.</p></div>
             <div class="faq-item"><h3>How long is the service?</h3><p>About two hours &mdash; worship, practical teaching, and time to connect.</p></div>
             <div class="faq-item"><h3>Do I have to be a Christian to come?</h3><p>Not at all. You don&rsquo;t have to be perfect to be here &mdash; just willing to learn and grow.</p></div>
-          </div>
-          <div class="btn-row">
-            <a class="btn btn-primary" href="contact.html">Ask a Question</a>
-            <a class="btn btn-ghost" href="about.html">Our Vision &amp; Values</a>
           </div>
         </div>
       </div>
@@ -114,19 +141,8 @@
 
     <section class="section" style="padding-top:0">
       <div class="wrap">
-        <div class="cta-band reveal" style="margin-bottom:2.5rem">
-          <div>
-            <p class="eyebrow">Your Next Step</p>
-            <h2>Still deciding?</h2>
-            <p>Meet the pastors who&rsquo;ll greet you at the door &mdash; or ask us for prayer right now.</p>
-          </div>
-          <div class="btn-row cta-band-actions">
-            <a class="btn btn-primary" href="leadership.html">Meet Our Pastors</a>
-            <a class="btn btn-ghost" href="contact.html">Ask for Prayer</a>
-          </div>
-        </div>
         <div class="quote-block">
-          <blockquote>SOZO is a Greek word that captures the gospel in a single word — salvation, healing, and redemption. In the big picture, it means &ldquo;wholeness.&rdquo;</blockquote>
+          <blockquote>SOZO is a Greek word that captures the gospel in a single word &mdash; salvation, healing, and redemption. In the big picture, it means &ldquo;wholeness.&rdquo;</blockquote>
           <div class="btn-row" style="justify-content:center">
             <a class="btn btn-primary" href="contact.html">Let Us Know You&rsquo;re Coming</a>
           </div>
@@ -141,19 +157,19 @@
         <div>
           <h3>SOZO Loveland</h3>
           <p>9781 Fields Ertel Road<br>Loveland, OH 45140</p>
-          <p>Sundays · 10AM–12PM<br>SOZO Kids check-in from 10:15 AM</p>
+          <p>Sundays &middot; 10AM&ndash;12PM<br>SOZO Kids check-in from 10:15 AM</p>
         </div>
         <div>
           <h3>Explore</h3>
-          <p><a href="visit.html">Plan Your Visit</a><br><a href="about.html">Our Vision &amp; Values</a><br><a href="sermons.html">Messages</a><br><a href="events.html">Events</a></p>
+          <p><a href="visit.html">Plan Your Visit</a><br><a href="sermons.html">Messages</a><br><a href="ministries.html">Ministries</a><br><a href="venue.html">The Venue</a><br><a href="events.html">Events</a></p>
         </div>
         <div>
           <h3>Connect</h3>
-          <p><a href="give.html">Give</a><br><a href="contact.html">Contact</a><br><a href="ministries.html">Ministries</a><br><a href="leadership.html">Leadership</a></p>
+          <p><a href="give.html">Give</a><br><a href="contact.html">Contact</a><br><a href="about.html">Our Vision</a><br><a href="leadership.html">Leadership</a></p>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> SOZO Loveland. All rights reserved.</span>
+        <span>&copy; <span data-year>2026</span> SOZO Loveland. All rights reserved.</span>
         <span>Crafted by <a href="https://stevepeeleii.com">SPII</a></span>
       </div>
     </div>
@@ -162,5 +178,38 @@
   <script src="js/config.js"></script>
   <script src="js/analytics.js"></script>
   <script src="js/main.js"></script>
+  <script>
+  (function(){
+    var kids = document.querySelectorAll('#c-kids .chip');
+    kids.forEach(function(c){ c.addEventListener('click', function(){
+      c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+    });});
+    document.getElementById('c-submit').addEventListener('click', function(){
+      var name = document.getElementById('c-name').value.trim();
+      var date = document.getElementById('c-date').value;
+      var adults = document.getElementById('c-adults').value;
+      var kidAges = Array.prototype.map.call(
+        document.querySelectorAll('#c-kids .chip[aria-pressed="true"]'),
+        function(c){ return c.textContent; });
+      var when = date ? new Date(date + 'T12:00:00').toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}) : 'this Sunday';
+      var steps = [
+        'Park at 9781 Fields Ertel Rd — hospitality team meets you at the main doors.',
+        'Arrive by 9:45 AM for a relaxed start' + (kidAges.length ? '; SOZO Kids check-in opens 10:15 AM — head straight to the check-in room with ' + kidAges.join(', ') + '.' : '.'),
+        'Service runs 10AM–12PM: anointed worship, practical teaching, time to connect.',
+        'After service, stay for coffee — tell someone it\u2019s your first Sunday.'
+      ];
+      if (kidAges.length) {
+        steps.splice(1, 0, 'Kids (' + kidAges.join(', ') + '): our SOZO Kids team will help with check-in and show them their rooms.');
+      }
+      var ol = document.getElementById('c-plan');
+      ol.innerHTML = '';
+      steps.forEach(function(s){ var li = document.createElement('li'); li.textContent = s; ol.appendChild(li); });
+      document.getElementById('c-title').textContent =
+        (name ? name + ', your' : 'Your') + ' Sunday, planned — ' + when + ' (' + adults + (kidAges.length ? ', kids in tow' : '') + '):';
+      document.getElementById('c-result').classList.add('show');
+      document.getElementById('c-result').scrollIntoView({behavior:'smooth', block:'nearest'});
+    });
+  })();
+  </script>
 </body>
 </html>
