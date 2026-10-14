@@ -6,11 +6,17 @@
   window.addEventListener('scroll', onScroll); onScroll();
 
   // Mobile menu
-  var burger = document.getElementById('hamburger'), links = document.getElementById('navLinks');
-  if(burger && links){
-    burger.addEventListener('click', function(){ links.classList.toggle('open'); });
-    links.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){ links.classList.remove('open'); });
+  var toggle = document.querySelector('.nav-toggle'), menu = document.querySelector('.nav-links');
+  if(toggle && menu){
+    toggle.addEventListener('click', function(){
+      var open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
