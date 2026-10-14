@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — SOZO Loveland</title>
+  <meta name="description" content="Contact SOZO Loveland — 9781 Fields Ertel Rd, Loveland OH 45140. Questions about Jesus, planning a visit, or getting connected? We'd love to hear from you.">
+  <meta property="og:title" content="Contact — SOZO Loveland">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/interior-1.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/sozo-logo.jpg">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="preview-banner" role="note">PREVIEW ONLY &mdash; staging review build, not the live church website.</div>
+  <header class="site-header">
+    <div class="wrap nav-bar">
+      <a class="brand" href="index.html">
+        <img src="assets/sozo-logo.jpg" alt="SOZO Loveland logo" width="88" height="88">
+        <span class="brand-name">SOZO<small>Loveland</small></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">☰</button>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="visit.html">Visit</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+          <li><a href="ministries.html">Ministries</a></li>
+          <li><a href="sermons.html">Messages</a></li>
+          <li><a href="watch.html">Watch</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="give.html">Give</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="visit.html" class="nav-cta">Plan Your Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h1>We&rsquo;d love to connect.</h1>
+        <p class="lede" style="max-width:42rem">Have questions about Jesus, or want to know more about our church? We at SOZO Loveland would love to connect with you — just send us a note.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <p class="eyebrow">Send a Message</p>
+          <h2>Ask us anything.</h2>
+          <!-- BACKEND PLX-403: wire form delivery to contact@sozoloveland.com -->
+          <form id="contact-form" action="#" method="post" data-endpoint="/api/contact" onsubmit="return contactPlaceholder(event)">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label for="topic">I&rsquo;m interested in&hellip;</label>
+              <input id="topic" name="topic" type="text" placeholder="Planning a visit, SOZO Kids, serving, questions about faith…">
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+            <p class="form-note" id="contact-note" style="margin-top:0.8rem">Messages deliver to <strong>contact@sozoloveland.com</strong> once the form is wired. Prefer to talk? Call <strong>(513) 677-8500</strong>.</p>
+          </form>
+          <script>
+            function contactPlaceholder(e) {
+              e.preventDefault();
+              document.getElementById("contact-note").textContent =
+                "Thanks — your message is noted. The form will deliver to contact@sozoloveland.com once wiring is complete.";
+              return false;
+            }
+          </script>
+        </div>
+        <div>
+          <p class="eyebrow">Visit Us</p>
+          <h2>Find us on Sundays.</h2>
+          <p><strong>SOZO Loveland</strong><br>9781 Fields Ertel Road<br>Loveland, OH 45140<br><a href="mailto:contact@sozoloveland.com">contact@sozoloveland.com</a><br>(513) 677-8500</p>
+          <p>Sundays &middot; 10AM&ndash;12PM<br>SOZO Kids check-in from 10:15 AM</p>
+          <table class="hours-table" aria-label="Office hours">
+            <tbody>
+              <tr><td>Monday – Friday</td><td>9:00 AM – 5:00 PM</td></tr>
+              <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+              <tr><td>Sunday</td><td>9:00 AM – 1:00 PM</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:1.6rem">
+            <iframe class="map-frame" title="Map — SOZO Loveland, 9781 Fields Ertel Rd, Loveland OH" src="https://www.google.com/maps?q=9781+Fields+Ertel+Rd,+Loveland,+OH+45140&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="grid-2" style="align-items:stretch">
+          <div class="prayer-card reveal">
+            <p class="eyebrow" style="color:var(--gold)">Prayer Requests</p>
+            <h2>We&rsquo;d be honored to pray with you.</h2>
+            <ul>
+              <li>Ask for prayer directly after any service</li>
+              <li>Email the pastors: <a href="mailto:STEPHEN.PEELE@SOZOLOVELAND.COM">STEPHEN.PEELE@SOZOLOVELAND.COM</a></li>
+              <li>Call <a href="tel:+15136778500">(513) 677-8500</a></li>
+              <li>Text <strong>PRAYER</strong> to <a href="sms:+15132681118">(513) 268-1118</a></li>
+            </ul>
+            <p class="form-note" style="color:#b9a988;margin:1.2rem 0 0">All requests are handled confidentially.</p>
+          </div>
+          <div class="reveal">
+            <p class="eyebrow">Stay Connected</p>
+            <h2>Take the next step.</h2>
+            <p>Text <strong>CONNECT</strong> to <a href="sms:+15132681118">513-268-1118</a> to get plugged in &mdash; or find us where you already are.</p>
+            <div class="connect-row">
+              <a class="btn btn-dark" href="https://www.youtube.com/results?search_query=SOZO+Loveland+Church" target="_blank" rel="noopener">YouTube</a>
+              <a class="btn btn-ghost" href="https://www.instagram.com/sozolovelandchurch" target="_blank" rel="noopener">Instagram</a>
+              <a class="btn btn-ghost" href="https://www.facebook.com/sozoloveland" target="_blank" rel="noopener">Facebook</a>
+            </div>
+            <p class="form-note" style="margin-top:1.2rem">Download the SOZO app in the app stores for messages, giving, and updates.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="visit.html">Plan Your Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h3>SOZO Loveland</h3>
+          <p>9781 Fields Ertel Road<br>Loveland, OH 45140</p>
+          <p>Sundays · 10AM–12PM<br>SOZO Kids check-in from 10:15 AM</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <p><a href="visit.html">Plan Your Visit</a><br><a href="about.html">Our Vision &amp; Values</a><br><a href="sermons.html">Messages</a><br><a href="events.html">Events</a></p>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <p><a href="give.html">Give</a><br><a href="contact.html">Contact</a><br><a href="ministries.html">Ministries</a><br><a href="leadership.html">Leadership</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> SOZO Loveland. All rights reserved.</span>
+        <span>Crafted by <a href="https://stevepeeleii.com">SPII</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
