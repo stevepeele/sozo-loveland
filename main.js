@@ -1,1 +1,50 @@
-Ly8gU09aTyBMb3ZlbGFuZCDigJQgc2hhcmVkIGludGVyYWN0aW9ucwooZnVuY3Rpb24oKXsKICAvLyBOYXYgc2Nyb2xsIHN0YXRlCiAgdmFyIG5hdiA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCduYXYnKTsKICBmdW5jdGlvbiBvblNjcm9sbCgpeyBpZihuYXYpIG5hdi5jbGFzc0xpc3QudG9nZ2xlKCdzY3JvbGxlZCcsIHdpbmRvdy5zY3JvbGxZID4gNjApOyB9CiAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ3Njcm9sbCcsIG9uU2Nyb2xsKTsgb25TY3JvbGwoKTsKCiAgLy8gTW9iaWxlIG1lbnUKICB2YXIgYnVyZ2VyID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2hhbWJ1cmdlcicpLCBsaW5rcyA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCduYXZMaW5rcycpOwogIGlmKGJ1cmdlciAmJiBsaW5rcyl7CiAgICBidXJnZXIuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBmdW5jdGlvbigpeyBsaW5rcy5jbGFzc0xpc3QudG9nZ2xlKCdvcGVuJyk7IH0pOwogICAgbGlua3MucXVlcnlTZWxlY3RvckFsbCgnYScpLmZvckVhY2goZnVuY3Rpb24oYSl7CiAgICAgIGEuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBmdW5jdGlvbigpeyBsaW5rcy5jbGFzc0xpc3QucmVtb3ZlKCdvcGVuJyk7IH0pOwogICAgfSk7CiAgfQoKICAvLyBUYWJzICh2YWx1ZXMgcGFnZSkKICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCcudGFiJykuZm9yRWFjaChmdW5jdGlvbih0KXsKICAgIHQuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBmdW5jdGlvbigpewogICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCcudGFiJykuZm9yRWFjaChmdW5jdGlvbih4KXsgeC5jbGFzc0xpc3QucmVtb3ZlKCdhY3RpdmUnKTsgfSk7CiAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJy50YWItcGFuZWwnKS5mb3JFYWNoKGZ1bmN0aW9uKHgpeyB4LmNsYXNzTGlzdC5yZW1vdmUoJ2FjdGl2ZScpOyB9KTsKICAgICAgdC5jbGFzc0xpc3QuYWRkKCdhY3RpdmUnKTsKICAgICAgdmFyIHBhbmVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3RhYi0nICsgdC5kYXRhc2V0LnRhYik7CiAgICAgIGlmKHBhbmVsKSBwYW5lbC5jbGFzc0xpc3QuYWRkKCdhY3RpdmUnKTsKICAgIH0pOwogIH0pOwoKICAvLyBSZXZlYWwgb24gc2Nyb2xsCiAgdmFyIGlvID0gbmV3IEludGVyc2VjdGlvbk9ic2VydmVyKGZ1bmN0aW9uKGVzKXsKICAgIGVzLmZvckVhY2goZnVuY3Rpb24oZSl7CiAgICAgIGlmKGUuaXNJbnRlcnNlY3RpbmcpeyBlLnRhcmdldC5jbGFzc0xpc3QuYWRkKCd2aXNpYmxlJyk7IGlvLnVub2JzZXJ2ZShlLnRhcmdldCk7IH0KICAgIH0pOwogIH0sIHt0aHJlc2hvbGQ6LjEyfSk7CiAgZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnLnJldmVhbCcpLmZvckVhY2goZnVuY3Rpb24oZWwpeyBpby5vYnNlcnZlKGVsKTsgfSk7CgogIC8vIENvbnRhY3QgZm9ybSAoZGVtbykKICB2YXIgZm9ybSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjb250YWN0Rm9ybScpOwogIGlmKGZvcm0pewogICAgZm9ybS5hZGRFdmVudExpc3RlbmVyKCdzdWJtaXQnLCBmdW5jdGlvbihlKXsKICAgICAgZS5wcmV2ZW50RGVmYXVsdCgpOwogICAgICB2YXIgYnRuID0gZm9ybS5xdWVyeVNlbGVjdG9yKCdidXR0b25bdHlwZT1zdWJtaXRdJyk7CiAgICAgIGJ0bi50ZXh0Q29udGVudCA9ICdNZXNzYWdlIFNlbnQgXHUyNzEzJzsgYnRuLmRpc2FibGVkID0gdHJ1ZTsKICAgICAgYnRuLnN0eWxlLmJhY2tncm91bmQgPSAnIzJkN2Q0Zic7CiAgICAgIHNldFRpbWVvdXQoZnVuY3Rpb24oKXsKICAgICAgICBmb3JtLnJlc2V0KCk7IGJ0bi50ZXh0Q29udGVudCA9ICdTZW5kIE1lc3NhZ2UnOwogICAgICAgIGJ0bi5kaXNhYmxlZCA9IGZhbHNlOyBidG4uc3R5bGUuYmFja2dyb3VuZCA9ICcnOwogICAgICB9LCA0MDAwKTsKICAgIH0pOwogIH0KfSkoKTsK
+// SOZO Loveland — shared interactions
+(function(){
+  // Nav scroll state
+  var nav = document.getElementById('nav');
+  function onScroll(){ if(nav) nav.classList.toggle('scrolled', window.scrollY > 60); }
+  window.addEventListener('scroll', onScroll); onScroll();
+
+  // Mobile menu
+  var burger = document.getElementById('hamburger'), links = document.getElementById('navLinks');
+  if(burger && links){
+    burger.addEventListener('click', function(){ links.classList.toggle('open'); });
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ links.classList.remove('open'); });
+    });
+  }
+
+  // Tabs (values page)
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(function(x){ x.classList.remove('active'); });
+      document.querySelectorAll('.tab-panel').forEach(function(x){ x.classList.remove('active'); });
+      t.classList.add('active');
+      var panel = document.getElementById('tab-' + t.dataset.tab);
+      if(panel) panel.classList.add('active');
+    });
+  });
+
+  // Reveal on scroll
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  // Contact form (demo)
+  var form = document.getElementById('contactForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = form.querySelector('button[type=submit]');
+      btn.textContent = 'Message Sent \u2713'; btn.disabled = true;
+      btn.style.background = '#2d7d4f';
+      setTimeout(function(){
+        form.reset(); btn.textContent = 'Send Message';
+        btn.disabled = false; btn.style.background = '';
+      }, 4000);
+    });
+  }
+})();
