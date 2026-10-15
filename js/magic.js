@@ -21,7 +21,7 @@
     {t:"SOZO Kids", d:"Nursery through 6th grade · check-in from 10:15 AM", h:"ministries.html#kids", k:"kids children nursery family"},
     {t:"The Venue — book the room", d:"Room + concert-grade sound + engineer, one package", h:"venue.html", k:"venue book rent concert wedding event space"},
     {t:"Events — gather, grow, go", d:"Men's Watch Party 10/25 · Glow Party 10/30", h:"events.html", k:"events calendar party watch"},
-    {t:"Give", d:"Fuel the mission", h:"give.html", k:"give donate offering tithe"},
+    {t:"Contribute", d:"Fuel the mission", h:"contribute.html", k:"contribute give donate offering tithe"},
     {t:"Contact — say hello", d:"Questions, prayer, or just to talk", h:"contact.html", k:"contact hello prayer question talk email"},
     {t:"Our Vision — Open. Embrace. Link.", d:"The journey we're on together", h:"about.html", k:"vision about believe values open embrace link"},
     {t:"Leadership — meet our pastors", d:"The people who'll greet you at the door", h:"leadership.html", k:"leadership pastors steve tara staff"}
