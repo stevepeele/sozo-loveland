@@ -38,12 +38,30 @@
     palette.innerHTML =
       '<div class="pal-box" role="dialog" aria-label="Ask Sozo">' +
         '<div class="pal-head"><span class="pal-title">Ask Sozo</span><span class="pal-hint">↑↓ navigate · ↵ open · esc close</span></div>' +
-        '<input class="pal-input" type="text" placeholder="Try &quot;plan a visit&quot;, &quot;watch&quot;, &quot;venue&quot;…" aria-label="Search the site">' +
+        '<div class="pal-searchrow"><input class="pal-input" type="text" placeholder="Try &quot;plan a visit&quot;, &quot;watch&quot;, &quot;venue&quot;…" aria-label="Search the site">' +
+        '<button class="pal-mic" aria-label="Search by voice" title="Search by voice">🎙</button></div>' +
         '<div class="pal-list" role="listbox"></div>' +
       "</div>";
     document.body.appendChild(palette);
     palInput = palette.querySelector(".pal-input");
     palList = palette.querySelector(".pal-list");
+    var mic = palette.querySelector(".pal-mic");
+    var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) { mic.style.display = "none"; }
+    else {
+      mic.addEventListener("click", function(){
+        var rec = new SR();
+        rec.lang = "en-US"; rec.interimResults = false; rec.maxAlternatives = 1;
+        mic.classList.add("listening"); mic.textContent = "●";
+        rec.onresult = function(e){
+          palInput.value = e.results[0][0].transcript;
+          renderPal(palInput.value); palInput.focus();
+        };
+        rec.onend = function(){ mic.classList.remove("listening"); mic.textContent = "🎙"; };
+        rec.onerror = rec.onend;
+        try { rec.start(); } catch(err){ rec.onend(); }
+      });
+    }
     palette.addEventListener("click", function(e){ if (e.target === palette) closePal(); });
     palInput.addEventListener("input", function(){ renderPal(palInput.value); });
     palInput.addEventListener("keydown", function(e){
@@ -289,9 +307,36 @@
     render();
   }
 
+  /* ================= venue before/after slider ================= */
+  function buildSlider(){
+    var wrap = document.getElementById("venue-ba");
+    if (!wrap) return;
+    var after = document.getElementById("ba-after");
+    var handle = document.getElementById("ba-handle");
+    var afterImg = after.querySelector("img");
+    function setPos(clientX){
+      var r = wrap.getBoundingClientRect();
+      var p = Math.max(2, Math.min(98, (clientX - r.left) / r.width * 100));
+      after.style.width = p + "%";
+      afterImg.style.width = r.width + "px";
+      handle.style.left = p + "%";
+    }
+    setPos(wrap.getBoundingClientRect().left + wrap.getBoundingClientRect().width * 0.5);
+    var drag = false;
+    handle.addEventListener("pointerdown", function(e){ drag = true; handle.setPointerCapture(e.pointerId); });
+    window.addEventListener("pointerup", function(){ drag = false; });
+    window.addEventListener("pointermove", function(e){ if (drag) setPos(e.clientX); });
+    wrap.addEventListener("click", function(e){ if (!drag) setPos(e.clientX); });
+    window.addEventListener("resize", function(){
+      var r = wrap.getBoundingClientRect();
+      afterImg.style.width = r.width + "px";
+    });
+  }
+
   /* ================= boot ================= */
   buildPill();
   buildQuiz();
   buildTicker();
   buildComposer();
+  buildSlider();
 })();

@@ -34,6 +34,7 @@
           <li><a href="venue.html">The Venue</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="give.html">Give</a></li>
+          <li><a href="prayer.html">Prayer Room</a></li>
           <li><a href="visit.html" class="nav-cta">Plan Your Visit</a></li>
         </ul>
       </nav>
@@ -103,7 +104,7 @@
 
     <section class="section" style="background:var(--cream-2)">
       <div class="wrap">
-        <div class="series-feature reveal">
+        <div class="series-feature reveal" data-cine>
           <div class="series-feature-media"><img src="assets/interior-4.jpg" alt="Sunday morning inside SOZO Loveland" loading="lazy"></div>
           <div class="series-feature-body">
             <p class="eyebrow">Current Series</p>
@@ -123,7 +124,7 @@
         <p class="eyebrow">Not sure where to start?</p>
         <h2 style="max-width:36rem">Find your fit in 30 seconds.</h2>
         <p class="section-lede">Three quick questions — we'll point you to the right track, the right people, and the right Sunday.</p>
-        <div class="fit-wrap reveal" id="fit-quiz"></div>
+        <div class="fit-wrap reveal" id="fit-quiz" data-cine></div>
       </div>
     </section>
 
@@ -219,7 +220,7 @@
 
     <section class="section" style="padding-top:0">
       <div class="wrap">
-        <div class="cta-band reveal">
+        <div class="cta-band reveal" data-cine>
           <div>
             <p class="eyebrow">This Sunday</p>
             <h2>You&rsquo;re welcome home.</h2>
@@ -264,5 +265,8 @@
   <script src="js/analytics.js"></script>
   <script src="js/main.js"></script>
   <script src="js/magic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/cinema.js"></script>
 </body>
 </html>
