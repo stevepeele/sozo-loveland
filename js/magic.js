@@ -15,7 +15,7 @@
   var INDEX = [
     {t:"Plan Your Visit", d:"Sundays 10AM–12PM · 9781 Fields Ertel Rd, Loveland", h:"visit.html", k:"visit plan sunday come new here first time"},
     {t:"Messages — Message Tracks", d:"Series as albums, messages as tracks. Press play.", h:"sermons.html", k:"messages sermons tracks series watch listen archive"},
-    {t:"Foundations — current series", d:"4 tracks · what we're teaching now", h:"sermons.html#current", k:"foundations current series now"},
+    {t:"The Kingdom At Hand — current series", d:"3 tracks · what we're teaching now", h:"sermons.html#current", k:"kingdom current series now"},
     {t:"What's the Gospel? — start here", d:"The good news, plainly. New to faith? Start here.", h:"sermons.html#gospel", k:"gospel faith new jesus saved start"},
     {t:"Ministries — find your people", d:"SOZO Kids, Groups, Worship, Outreach", h:"ministries.html", k:"ministries kids groups worship outreach serve youth"},
     {t:"SOZO Kids", d:"Nursery through 6th grade · check-in from 10:15 AM", h:"ministries.html#kids", k:"kids children nursery family"},
@@ -149,7 +149,7 @@
                ["Check your date","venue.html#inquire","Three quick answers — we'll come back with a quote"]] };
     }
     if (want === 0){
-      steps.push(["Start the current track","sermons.html#current","“Foundations” — 4 messages, start at track 01"]);
+      steps.push(["Start the current track","sermons.html#current","“The Kingdom At Hand” — 3 messages, start at track 01"]);
     } else if (want === 2){
       steps.push(["Find your team","ministries.html","Worship, kids, outreach — there's a seat with your name on it"]);
     } else {
