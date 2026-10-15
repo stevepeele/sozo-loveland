@@ -15,7 +15,7 @@
   var INDEX = [
     {t:"Plan Your Visit", d:"Sundays 10AM–12PM · 9781 Fields Ertel Rd, Loveland", h:"visit.html", k:"visit plan sunday come new here first time"},
     {t:"Messages — Message Tracks", d:"Series as albums, messages as tracks. Press play.", h:"sermons.html", k:"messages sermons tracks series watch listen archive"},
-    {t:"The Kingdom At Hand — current series", d:"3 tracks · what we're teaching now", h:"sermons.html#current", k:"kingdom current series now"},
+    {t:"Foundations — current series", d:"4 tracks · what we're teaching now", h:"sermons.html#current", k:"foundations current series now"},
     {t:"What's the Gospel? — start here", d:"The good news, plainly. New to faith? Start here.", h:"sermons.html#gospel", k:"gospel faith new jesus saved start"},
     {t:"Ministries — find your people", d:"SOZO Kids, Groups, Worship, Outreach", h:"ministries.html", k:"ministries kids groups worship outreach serve youth"},
     {t:"SOZO Kids", d:"Nursery through 6th grade · check-in from 10:15 AM", h:"ministries.html#kids", k:"kids children nursery family"},
@@ -149,7 +149,7 @@
                ["Check your date","venue.html#inquire","Three quick answers — we'll come back with a quote"]] };
     }
     if (want === 0){
-      steps.push(["Start the current track","sermons.html#current","“The Kingdom At Hand” — 3 messages, start at track 01"]);
+      steps.push(["Start the current track","sermons.html#current","“Foundations” — 4 messages, start at track 01"]);
     } else if (want === 2){
       steps.push(["Find your team","ministries.html","Worship, kids, outreach — there's a seat with your name on it"]);
     } else {
@@ -333,10 +333,42 @@
     });
   }
 
+  /* ================= video tracks (inline YouTube players) ================= */
+  function buildVideoTracks(){
+    var tracks = document.querySelectorAll(".vtrack");
+    if (!tracks.length) return;
+    tracks.forEach(function(li){
+      var btn = li.querySelector(".vtrack-btn");
+      var player = li.querySelector(".vtrack-player");
+      if (!btn || !player) return;
+      btn.addEventListener("click", function(){
+        var open = btn.getAttribute("aria-expanded") === "true";
+        document.querySelectorAll(".vtrack").forEach(function(o){
+          if (o !== li){
+            o.querySelector(".vtrack-player").hidden = true;
+            o.querySelector(".vtrack-player").innerHTML = "";
+            o.querySelector(".vtrack-btn").setAttribute("aria-expanded", "false");
+          }
+        });
+        if (open){
+          player.hidden = true; player.innerHTML = "";
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          var v = li.getAttribute("data-video");
+          var label = btn.getAttribute("aria-label") || "Message video";
+          player.innerHTML = '<iframe src="https://www.youtube.com/embed/' + v + '?autoplay=1&rel=0" title="' + label.replace(/"/g,"") + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+          player.hidden = false;
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+  }
+
   /* ================= boot ================= */
   buildPill();
   buildQuiz();
   buildTicker();
   buildComposer();
   buildSlider();
+  buildVideoTracks();
 })();
