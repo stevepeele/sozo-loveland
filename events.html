@@ -1,1 +1,286 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgPG1ldGEgY2hhcnNldD0idXRmLTgiPgogIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MSI+CiAgPHRpdGxlPkV2ZW50cyBhdCBTT1pPIOKAlCBHYXRoZXJpbmdzICZhbXA7IEhvc3RpbmcgfCBTT1pPIExvdmVsYW5kPC90aXRsZT4KICA8bWV0YSBuYW1lPSJkZXNjcmlwdGlvbiIgY29udGVudD0iV2hhdCdzIGNvbWluZyB1cCBhdCBTT1pPIExvdmVsYW5kIOKAlCBhbmQgaG93IHRvIGhvc3QgeW91ciBjb25jZXJ0LCB3ZWRkaW5nLCBvciBnYXRoZXJpbmcgaW4gb3VyIHJvb20uIDk3ODEgRmllbGRzIEVydGVsIFJkLCBMb3ZlbGFuZCBPSC4iPgogIDxtZXRhIHByb3BlcnR5PSJvZzp0aXRsZSIgY29udGVudD0iRXZlbnRzIGF0IFNPWk8g4oCUIFNPWk8gTG92ZWxhbmQiPgogIDxtZXRhIHByb3BlcnR5PSJvZzp0eXBlIiBjb250ZW50PSJ3ZWJzaXRlIj4KICA8bWV0YSBwcm9wZXJ0eT0ib2c6aW1hZ2UiIGNvbnRlbnQ9ImFzc2V0cy9pbnRlcmlvci01LmpwZyI+CiAgPGxpbmsgcmVsPSJwcmVjb25uZWN0IiBocmVmPSJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tIj4KICA8bGluayByZWw9InByZWNvbm5lY3QiIGhyZWY9Imh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb20iIGNyb3Nzb3JpZ2luPgogIDxsaW5rIGhyZWY9Imh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9RnJhdW5jZXM6b3Bzeix3Z2h0QDkuLjE0NCw1MDA7OS4uMTQ0LDU2MDs5Li4xNDQsNjAwJmZhbWlseT1JbnRlcjp3Z2h0QDQwMDs1MDA7NjAwOzcwMCZkaXNwbGF5PXN3YXAiIHJlbD0ic3R5bGVzaGVldCI+CiAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJzdHlsZXMuY3NzIj4KICA8bGluayByZWw9Imljb24iIGhyZWY9ImFzc2V0cy9zb3pvLWxvZ28uanBnIj4KPC9oZWFkPgo8Ym9keT4KICA8YSBjbGFzcz0ic2tpcC1saW5rIiBocmVmPSIjbWFpbiI+U2tpcCB0byBjb250ZW50PC9hPgogIDxkaXYgY2xhc3M9InByZXZpZXctYmFubmVyIj5QcmV2aWV3ICZtZGFzaDsgYSBjb25jZXB0IHJlYnVpbGQgb2YgPHN0cm9uZz5zb3pvbG92ZWxhbmQuY29tPC9zdHJvbmc+LiBOb3QgdGhlIGxpdmUgc2l0ZS48L2Rpdj4KICA8aGVhZGVyIGNsYXNzPSJzaXRlLWhlYWRlciI+CiAgICA8ZGl2IGNsYXNzPSJ3cmFwIG5hdi1iYXIiPgogICAgICA8YSBjbGFzcz0iYnJhbmQiIGhyZWY9ImluZGV4Lmh0bWwiPgogICAgICAgIDxpbWcgc3JjPSJhc3NldHMvc296by1sb2dvLmpwZyIgYWx0PSJTT1pPIExvdmVsYW5kIGxvZ28iIHdpZHRoPSI4OCIgaGVpZ2h0PSI4OCI+CiAgICAgICAgPHNwYW4gY2xhc3M9ImJyYW5kLW5hbWUiPlNPWk88c21hbGw+TG92ZWxhbmQ8L3NtYWxsPjwvc3Bhbj4KICAgICAgPC9hPgogICAgICA8YnV0dG9uIGNsYXNzPSJuYXYtdG9nZ2xlIiBhcmlhLWV4cGFuZGVkPSJmYWxzZSIgYXJpYS1sYWJlbD0iVG9nZ2xlIG5hdmlnYXRpb24gbWVudSI+4piwPC9idXR0b24+CiAgICAgIDxuYXYgYXJpYS1sYWJlbD0iUHJpbWFyeSI+CiAgICAgICAgPHVsIGNsYXNzPSJuYXYtbGlua3MiPgogICAgICAgICAgPGxpPjxhIGhyZWY9ImluZGV4Lmh0bWwiPkhvbWU8L2E+PC9saT4KICAgICAgICAgIDxsaT48YSBocmVmPSJ2aXNpdC5odG1sIj5WaXNpdDwvYT48L2xpPgogICAgICAgICAgPGxpPjxhIGhyZWY9InNlcm1vbnMuaHRtbCI+TWVzc2FnZXM8L2E+PC9saT4KICAgICAgICAgIDxsaT48YSBocmVmPSJtaW5pc3RyaWVzLmh0bWwiPk1pbmlzdHJpZXM8L2E+PC9saT4KICAgICAgICAgIDxsaT48YSBocmVmPSJldmVudHMuaHRtbCIgYXJpYS1jdXJyZW50PSJwYWdlIj5FdmVudHM8L2E+PC9saT4KICAgICAgICAgIDxsaT48YSBocmVmPSJnaXZlLmh0bWwiPkdpdmU8L2E+PC9saT4KICAgICAgICAgIDxsaT48YSBocmVmPSJwcmF5ZXIuaHRtbCI+TGV0JnJzcXVvO3MgUHJheTwvYT48L2xpPgogICAgICAgICAgPGxpPjxhIGhyZWY9ImdpdmUuaHRtbCIgY2xhc3M9Im5hdi1jdGEiPkNvbnRyaWJ1dGU8L2E+PC9saT4KICAgICAgICA8L3VsPgogICAgICA8L25hdj4KICAgIDwvZGl2PgogIDwvaGVhZGVyPgoKICA8bWFpbiBpZD0ibWFpbiI+CiAgICA8c2VjdGlvbiBjbGFzcz0icGFnZS1oZXJvIj4KICAgICAgPGRpdiBjbGFzcz0id3JhcCI+CiAgICAgICAgPHAgY2xhc3M9ImV5ZWJyb3ciPkV2ZW50cyBhdCBTT1pPPC9wPgogICAgICAgIDxoMT5HYXRoZXIuIEdvLiBIb3N0LjwvaDE+CiAgICAgICAgPHAgY2xhc3M9ImxlZGUiIHN0eWxlPSJtYXgtd2lkdGg6NDJyZW0iPldoYXQmcnNxdW87cyBjb21pbmcgdXAgaW4gdGhlIG5leHQgMzAgZGF5cyAmbWRhc2g7IGFuZCBob3cgdGhpcyByb29tIGNhbiBob3N0IHlvdXIgY29uY2VydCwgd2VkZGluZywgb3IgZ2F0aGVyaW5nLjwvcD4KICAgICAgICA8ZGl2IGNsYXNzPSJidG4tcm93Ij4KICAgICAgICAgIDxhIGNsYXNzPSJidG4gYnRuLXByaW1hcnkiIGhyZWY9IiN1cGNvbWluZyI+V2hhdCZyc3F1bztzIGNvbWluZyB1cDwvYT4KICAgICAgICAgIDxhIGNsYXNzPSJidG4gYnRuLWdob3N0IiBocmVmPSIjaG9zdCI+SG9zdCB5b3VyIGV2ZW50IGhlcmU8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDxzZWN0aW9uIGNsYXNzPSJzZWN0aW9uIiBpZD0idXBjb21pbmciIHN0eWxlPSJzY3JvbGwtbWFyZ2luLXRvcDo1cmVtIj4KICAgICAgPGRpdiBjbGFzcz0id3JhcCI+CiAgICAgICAgPHAgY2xhc3M9ImV5ZWJyb3ciPk5leHQgMzAgRGF5czwvcD4KICAgICAgICA8aDIgc3R5bGU9Im1heC13aWR0aDozNnJlbSI+TWFyayB5b3VyIGNhbGVuZGFyLjwvaDI+CiAgICAgICAgPGRpdiBjbGFzcz0iZ3JpZC0zIHJldmVhbCIgc3R5bGU9Im1hcmdpbi10b3A6Mi4ycmVtIj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmQiPgogICAgICAgICAgICA8aW1nIHNyYz0iYXNzZXRzL2V2ZW50LXdhdGNoLXBhcnR5LnBuZyIgYWx0PSJTT1pPIE1lbidzIFdhdGNoIFBhcnR5IOKAlCBCZW5nYWxzIHZzIFJhdmVucyIgbG9hZGluZz0ibGF6eSIgc3R5bGU9ImJvcmRlci1yYWRpdXM6MTBweDttYXJnaW4tYm90dG9tOjFyZW0iPgogICAgICAgICAgICA8cCBjbGFzcz0iZXllYnJvdyI+U2F0LCBPY3QgMjUgJm1pZGRvdDsgMTowMCZuZGFzaDs0OjAwIFBNPC9wPgogICAgICAgICAgICA8aDM+U09aTyBNZW4gV2F0Y2ggUGFydHk8L2gzPgogICAgICAgICAgICA8cD5CZW5nYWxzIHZzLiBSYXZlbnMgJm1kYXNoOyBraWNraW5nIG9mZiByaWdodCBhZnRlciBzZXJ2aWNlLiBHb29kIGZvb2QsIGZvb3RiYWxsLCBhbmQgZ29vZCBtZW4uIEJyaW5nIGEgZnJpZW5kLCBicmluZyBhbiBhcHBldGl0ZS48L3A+CiAgICAgICAgICAgIDxwIGNsYXNzPSJmb3JtLW5vdGUiPlJTVlA6IHRleHQgNTEzLTY0Ni0xMTIxPC9wPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkIj4KICAgICAgICAgICAgPGltZyBzcmM9ImFzc2V0cy9ldmVudC1nbG93LXBhcnR5LnBuZyIgYWx0PSJMaWdodCB0aGUgTmlnaHQgR2xvdyBQYXJ0eSIgbG9hZGluZz0ibGF6eSIgc3R5bGU9ImJvcmRlci1yYWRpdXM6MTBweDttYXJnaW4tYm90dG9tOjFyZW0iPgogICAgICAgICAgICA8cCBjbGFzcz0iZXllYnJvdyI+RnJpLCBPY3QgMzAgJm1pZGRvdDsgNzowMCZuZGFzaDsxMDowMCBQTTwvcD4KICAgICAgICAgICAgPGgzPkxpZ2h0IHRoZSBOaWdodCBHbG93IFBhcnR5PC9oMz4KICAgICAgICAgICAgPHA+WW91dGggZ2xvdyBwYXJ0eSAmbWRhc2g7IG5lb24sIG11c2ljLCBhbmQgZnJpZW5kcy4gQ29tZSBsaXQgdXAuPC9wPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkIj4KICAgICAgICAgICAgPGltZyBzcmM9ImFzc2V0cy9oZXJvLXdlbGNvbWUuanBnIiBhbHQ9IlN1bmRheSBtb3JuaW5nIGF0IFNPWk8gTG92ZWxhbmQiIGxvYWRpbmc9ImxhenkiIHN0eWxlPSJib3JkZXItcmFkaXVzOjEwcHg7bWFyZ2luLWJvdHRvbToxcmVtIj4KICAgICAgICAgICAgPHAgY2xhc3M9ImV5ZWJyb3ciPkV2ZXJ5IFN1bmRheSAmbWlkZG90OyAxMEFNJm5kYXNoOzEyUE08L3A+CiAgICAgICAgICAgIDxoMz5TdW5kYXkgU2VydmljZTwvaDM+CiAgICAgICAgICAgIDxwPldvcnNoaXAsIHByYWN0aWNhbCB0ZWFjaGluZywgYW5kIHRpbWUgdG8gY29ubmVjdC4gU09aTyBLaWRzIGNoZWNrLWluIGZyb20gMTA6MTUgQU0uIEV2ZXJ5IHdlZWssIHNhbWUgb3BlbiBkb29yLjwvcD4KICAgICAgICAgICAgPGEgaHJlZj0idmlzaXQuaHRtbCI+UGxhbiB5b3VyIHZpc2l0ICZyYXJyOzwvYT4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvc2VjdGlvbj4KCiAgICA8c2VjdGlvbiBjbGFzcz0idmVudWUtZGFyayIgaWQ9Imhvc3QiIHN0eWxlPSJwYWRkaW5nOjQuNXJlbSAwO3Njcm9sbC1tYXJnaW4tdG9wOjVyZW0iPgogICAgICA8ZGl2IGNsYXNzPSJ3cmFwIj4KICAgICAgICA8cCBjbGFzcz0iZXllYnJvdyI+SG9zdCBZb3VyIEV2ZW50IEhlcmU8L3A+CiAgICAgICAgPGgyIHN0eWxlPSJtYXgtd2lkdGg6MzhyZW0iPlRoaXMgcm9vbSBkb2VzIG1vcmUgdGhhbiBTdW5kYXlzLjwvaDI+CiAgICAgICAgPHAgc3R5bGU9Im1heC13aWR0aDo0NHJlbSI+U09aTyBMb3ZlbGFuZCZyc3F1bztzIHNhbmN0dWFyeSByZS1saWdodHMgYmVhdXRpZnVsbHkgJm1kYXNoOyB3YXJtIHdvb2QsIHJlYWwgYWNvdXN0aWNzLCBhbmQgYSByb29tIHRoYXQgbWFrZXMgZXZlcnkgZ2F0aGVyaW5nIGZlZWwgbGlrZSBhbiBvY2Nhc2lvbi4gT25lIHBhY2thZ2U6IHRoZSByb29tLCBjb25jZXJ0LWdyYWRlIHNvdW5kLCBhbmQgYSBsaXZlIGVuZ2luZWVyLjwvcD4KICAgICAgICA8ZGl2IGNsYXNzPSJzcGVjLWdyaWQiPgogICAgICAgICAgPGRpdiBjbGFzcz0ic3BlYy1jYXJkIj4KICAgICAgICAgICAgPGgzPlRoZSBSb29tPC9oMz4KICAgICAgICAgICAgPHA+QSB3YXJtIHNhbmN0dWFyeSB3aXRoIHJlYWwgY2hhcmFjdGVyICZtZGFzaDsgZmxleGlibGUgc2VhdGluZywgbmF0dXJhbCBhY291c3RpY3MsIGFuZCBsaWdodGluZyB0aGF0IHNoaWZ0cyBmcm9tIFN1bmRheSBtb3JuaW5nIHRvIFNhdHVyZGF5IG5pZ2h0LjwvcD4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0ic3BlYy1jYXJkIj4KICAgICAgICAgICAgPGgzPlRoZSBTb3VuZDwvaDM+CiAgICAgICAgICAgIDxwPkNvbmNlcnQtZ3JhZGUgUEEsIHR1bmVkIHRvIHRoZSByb29tLiBZb3VyIGFydGlzdHMgYW5kIHNwZWFrZXJzIGhlYXJkIHRoZSB3YXkgdGhleSBkZXNlcnZlICZtZGFzaDsgY2xlYXIsIHdhcm0sIGFuZCBwcmVzZW50LjwvcD4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0ic3BlYy1jYXJkIj4KICAgICAgICAgICAgPGgzPlRoZSBFbmdpbmVlcjwvaDM+CiAgICAgICAgICAgIDxwPkEgbGl2ZSBwcm9kdWN0aW9uIGVuZ2luZWVyIG9uIHNpdGUgZnJvbSBsb2FkLWluIHRvIGxvYWQtb3V0LiBNaXgsIG1vbml0b3JzLCBhbmQgY2FsbSB1bmRlciBwcmVzc3VyZSAmbWRhc2g7IGluY2x1ZGVkLCBub3QgdXBzb2xkLjwvcD4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9InNwZWMtY2hpcHMiPgogICAgICAgICAgPHNwYW4gY2xhc3M9InNwZWMtY2hpcCI+Q29uY2VydHM8L3NwYW4+CiAgICAgICAgICA8c3BhbiBjbGFzcz0ic3BlYy1jaGlwIj5XZWRkaW5nczwvc3Bhbj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJzcGVjLWNoaXAiPkNvbmZlcmVuY2VzPC9zcGFuPgogICAgICAgICAgPHNwYW4gY2xhc3M9InNwZWMtY2hpcCI+Q29tbXVuaXR5IGdhdGhlcmluZ3M8L3NwYW4+CiAgICAgICAgICA8c3BhbiBjbGFzcz0ic3BlYy1jaGlwIj5BbGJ1bSByZWxlYXNlczwvc3Bhbj4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2IHN0eWxlPSJtYXJnaW4tdG9wOjIuNXJlbSI+CiAgICAgICAgICA8cCBjbGFzcz0iZXllYnJvdyI+RHJhZyB0aGUgaGFuZGxlPC9wPgogICAgICAgICAgPGgzIHN0eWxlPSJmb250LWZhbWlseTp2YXIoLS1zZXJpZik7Zm9udC1zaXplOjEuNXJlbTttYXJnaW4tYm90dG9tOjFyZW0iPlN1bmRheSBtb3JuaW5nIHRvIFNhdHVyZGF5IG5pZ2h0LjwvaDM+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJiYS13cmFwIiBpZD0idmVudWUtYmEiPgogICAgICAgICAgICA8aW1nIHNyYz0iYXNzZXRzL2ludGVyaW9yLTEuanBnIiBhbHQ9IlRoZSBTT1pPIExvdmVsYW5kIHNhbmN0dWFyeSBvbiBhIFN1bmRheSBtb3JuaW5nIiBsb2FkaW5nPSJsYXp5Ij4KICAgICAgICAgICAgPGRpdiBjbGFzcz0iYmEtYWZ0ZXIiIGlkPSJiYS1hZnRlciI+CiAgICAgICAgICAgICAgPGltZyBzcmM9ImFzc2V0cy9pbnRlcmlvci01LmpwZyIgYWx0PSJUaGUgU09aTyBMb3ZlbGFuZCBzYW5jdHVhcnkgc2V0IGZvciBhbiBldmVuaW5nIGV2ZW50IiBsb2FkaW5nPSJsYXp5Ij4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJiYS1sYWJlbCBiZWZvcmUiPlNVTkRBWSBNT1JOSU5HPC9zcGFuPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0iYmEtbGFiZWwgYWZ0ZXIiPkVWRU5UIE5JR0hUPC9zcGFuPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJiYS1oYW5kbGUiIGlkPSJiYS1oYW5kbGUiPjxzcGFuIGNsYXNzPSJiYS1rbm9iIj4mbGVmdHJpZ2h0YXJyb3c7PC9zcGFuPjwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0iZ3JpZC0zIiBzdHlsZT0ibWFyZ2luLXRvcDoyLjVyZW0iPgogICAgICAgICAgPGRpdj48aW1nIHNyYz0iYXNzZXRzL2ludGVyaW9yLTIuanBnIiBhbHQ9IlByZXZpb3VzIGVuZ2FnZW1lbnQgYXQgU09aTyBMb3ZlbGFuZCIgbG9hZGluZz0ibGF6eSIgc3R5bGU9ImJvcmRlci1yYWRpdXM6MTJweCI+PC9kaXY+CiAgICAgICAgICA8ZGl2PjxpbWcgc3JjPSJhc3NldHMvaW50ZXJpb3ItMy5qcGciIGFsdD0iUHJldmlvdXMgZW5nYWdlbWVudCBhdCBTT1pPIExvdmVsYW5kIiBsb2FkaW5nPSJsYXp5IiBzdHlsZT0iYm9yZGVyLXJhZGl1czoxMnB4Ij48L2Rpdj4KICAgICAgICAgIDxkaXY+PGltZyBzcmM9ImFzc2V0cy9ncm91cHMuanBnIiBhbHQ9IkNvbW11bml0eSBnYXRoZXJpbmcgYXQgU09aTyBMb3ZlbGFuZCIgbG9hZGluZz0ibGF6eSIgc3R5bGU9ImJvcmRlci1yYWRpdXM6MTJweCI+PC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgPC9zZWN0aW9uPgoKICAgIDxzZWN0aW9uIGNsYXNzPSJzZWN0aW9uIiBpZD0iaW5xdWlyZSIgc3R5bGU9ImJhY2tncm91bmQ6dmFyKC0tY3JlYW0tMik7c2Nyb2xsLW1hcmdpbi10b3A6NXJlbSI+CiAgICAgIDxkaXYgY2xhc3M9IndyYXAiPgogICAgICAgIDxwIGNsYXNzPSJleWVicm93Ij5DaGVjayBZb3VyIERhdGU8L3A+CiAgICAgICAgPGgyIHN0eWxlPSJtYXgtd2lkdGg6MzZyZW0iPlRlbGwgdXMgYWJvdXQgeW91ciBldmVudC48L2gyPgogICAgICAgIDxwIGNsYXNzPSJzZWN0aW9uLWxlZGUiPlRocmVlIHF1aWNrIGFuc3dlcnMgYW5kIHdlJnJzcXVvO2xsIGNvbWUgYmFjayB3aXRoIGF2YWlsYWJpbGl0eS4gTm8gcHJlc3N1cmUsIG5vIHJ1bmFyb3VuZC48L3A+CiAgICAgICAgPGRpdiBjbGFzcz0iY29uY2llcmdlIj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImNvbmNpZXJnZS1ncmlkIj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0iZmllbGQiPgogICAgICAgICAgICAgIDxsYWJlbCBmb3I9InYtdHlwZSI+RXZlbnQgdHlwZTwvbGFiZWw+CiAgICAgICAgICAgICAgPHNlbGVjdCBpZD0idi10eXBlIj4KICAgICAgICAgICAgICAgIDxvcHRpb24+Q29uY2VydCAvIGxpdmUgbXVzaWM8L29wdGlvbj4KICAgICAgICAgICAgICAgIDxvcHRpb24+V2VkZGluZyAvIGNlcmVtb255PC9vcHRpb24+CiAgICAgICAgICAgICAgICA8b3B0aW9uPkNvbmZlcmVuY2UgLyB3b3Jrc2hvcDwvb3B0aW9uPgogICAgICAgICAgICAgICAgPG9wdGlvbj5Db21tdW5pdHkgZ2F0aGVyaW5nPC9vcHRpb24+CiAgICAgICAgICAgICAgICA8b3B0aW9uPlNvbWV0aGluZyBlbHNlPC9vcHRpb24+CiAgICAgICAgICAgICAgPC9zZWxlY3Q+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJmaWVsZCI+CiAgICAgICAgICAgICAgPGxhYmVsIGZvcj0idi1kYXRlIj5QcmVmZXJyZWQgZGF0ZTwvbGFiZWw+CiAgICAgICAgICAgICAgPGlucHV0IGlkPSJ2LWRhdGUiIHR5cGU9ImRhdGUiPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0iZmllbGQiPgogICAgICAgICAgICA8bGFiZWw+V2hhdCBkbyB5b3UgbmVlZD88L2xhYmVsPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJjaGlwLXJvdyIgaWQ9InYtbmVlZHMiPgogICAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBjbGFzcz0iY2hpcCIgYXJpYS1wcmVzc2VkPSJmYWxzZSI+U291bmQgKyBlbmdpbmVlcjwvYnV0dG9uPgogICAgICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBjbGFzcz0iY2hpcCIgYXJpYS1wcmVzc2VkPSJmYWxzZSI+TGlnaHRpbmc8L2J1dHRvbj4KICAgICAgICAgICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgY2xhc3M9ImNoaXAiIGFyaWEtcHJlc3NlZD0iZmFsc2UiPkxpdmVzdHJlYW08L2J1dHRvbj4KICAgICAgICAgICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgY2xhc3M9ImNoaXAiIGFyaWEtcHJlc3NlZD0iZmFsc2UiPkhvc3BpdGFsaXR5IHRlYW08L2J1dHRvbj4KICAgICAgICAgICAgICA8YnV0dG9uIHR5cGU9ImJ1dHRvbiIgY2xhc3M9ImNoaXAiIGFyaWEtcHJlc3NlZD0iZmFsc2UiPlJlaGVhcnNhbCB0aW1lPC9idXR0b24+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJmaWVsZCI+CiAgICAgICAgICAgIDxsYWJlbCBmb3I9InYtbmFtZSI+WW91ciBuYW1lICZhbXA7IGVtYWlsPC9sYWJlbD4KICAgICAgICAgICAgPGlucHV0IGlkPSJ2LW5hbWUiIHR5cGU9InRleHQiIHBsYWNlaG9sZGVyPSJKYW5lIERvZSDigJQgamFuZUBleGFtcGxlLmNvbSI+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImJ0bi1yb3ciPgogICAgICAgICAgICA8YnV0dG9uIGNsYXNzPSJidG4gYnRuLXByaW1hcnkiIGlkPSJ2LXN1Ym1pdCIgdHlwZT0iYnV0dG9uIj5CdWlsZCBteSBpbnF1aXJ5ICZyYXJyOzwvYnV0dG9uPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJwbGFuLXJlc3VsdCIgaWQ9InYtcmVzdWx0IiBhcmlhLWxpdmU9InBvbGl0ZSI+CiAgICAgICAgICAgIDxoND5Zb3VyIGlucXVpcnksIHJlYWR5IHRvIHNlbmQ6PC9oND4KICAgICAgICAgICAgPG9sIGlkPSJ2LXN1bW1hcnkiPjwvb2w+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImJ0bi1yb3ciPgogICAgICAgICAgICAgIDxhIGNsYXNzPSJidG4gYnRuLWRhcmsiIGlkPSJ2LXNlbmQiIGhyZWY9ImNvbnRhY3QuaHRtbCI+U2VuZCBpdCB0byB0aGUgZXZlbnRzIHRlYW0gJnJhcnI7PC9hPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgIDwvc2VjdGlvbj4KCiAgICA8c2VjdGlvbiBjbGFzcz0ic2VjdGlvbiI+CiAgICAgIDxkaXYgY2xhc3M9IndyYXAiPgogICAgICAgIDxwIGNsYXNzPSJleWVicm93Ij5FdmVyeSBXZWVrPC9wPgogICAgICAgIDxoMj5PdXIgcmVndWxhciByaHl0aG1zLjwvaDI+CiAgICAgICAgPGRpdiBjbGFzcz0iZ3JpZC0zIHJldmVhbCIgc3R5bGU9Im1hcmdpbi10b3A6Mi4ycmVtIj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmQiPgogICAgICAgICAgICA8aDM+U3VuZGF5IFNlcnZpY2U8L2gzPgogICAgICAgICAgICA8cD48c3Ryb25nPlN1bmRheXMgJm1pZGRvdDsgMTBBTSZuZGFzaDsxMlBNPC9zdHJvbmc+PGJyPldvcnNoaXAsIHByYWN0aWNhbCB0ZWFjaGluZywgYW5kIHRpbWUgdG8gY29ubmVjdC4gU09aTyBLaWRzIGNoZWNrLWluIGZyb20gMTA6MTUgQU0uPC9wPgogICAgICAgICAgICA8YSBocmVmPSJ2aXNpdC5odG1sIj5QbGFuIHlvdXIgdmlzaXQgJnJhcnI7PC9hPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkIj4KICAgICAgICAgICAgPGgzPlNPWk8gR3JvdXBzPC9oMz4KICAgICAgICAgICAgPHA+PHN0cm9uZz5NZW4mcnNxdW87cyAmYW1wOyBXb21lbiZyc3F1bztzIGdyb3Vwczwvc3Ryb25nPjxicj5HYXRoZXJpbmdzIGFjcm9zcyB0aGUgZ2VuZXJhdGlvbnMgJm1kYXNoOyBmZWxsb3dzaGlwLCBjb252ZXJzYXRpb24sIGFuZCBjbG9zZXIgY29ubmVjdGlvbi48L3A+CiAgICAgICAgICAgIDxhIGhyZWY9Im1pbmlzdHJpZXMuaHRtbCNncm91cHMiPkxlYXJuIG1vcmUgJnJhcnI7PC9hPgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkIj4KICAgICAgICAgICAgPGgzPlNPWk8gWW91dGg8L2gzPgogICAgICAgICAgICA8cD48c3Ryb25nPlN0dWRlbnRzPC9zdHJvbmc+PGJyPlN1bW1lciBoYW5ncywgbW92aWUgbmlnaHRzLCBmYWxsIGV2ZW50cyAmbWRhc2g7IGEgcGxhY2Ugd2hlcmUgc3R1ZGVudHMgYmVsb25nIGFuZCBncm93LjwvcD4KICAgICAgICAgICAgPGEgaHJlZj0ibWluaXN0cmllcy5odG1sI2dyb3VwcyI+TGVhcm4gbW9yZSAmcmFycjs8L2E+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L3NlY3Rpb24+CgogICAgPHNlY3Rpb24gY2xhc3M9InNlY3Rpb24iIHN0eWxlPSJiYWNrZ3JvdW5kOnZhcigtLWNyZWFtLTIpO3BhZGRpbmctdG9wOjAiPgogICAgICA8ZGl2IGNsYXNzPSJ3cmFwIj4KICAgICAgICA8cCBjbGFzcz0iZXllYnJvdyI+VGhyb3VnaCB0aGUgWWVhcjwvcD4KICAgICAgICA8aDI+U2lnbmF0dXJlIGdhdGhlcmluZ3MuPC9oMj4KICAgICAgICA8ZGl2IGNsYXNzPSJwaWxsLXJvdyIgc3R5bGU9Im1hcmdpbi10b3A6MS42cmVtIj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJwaWxsIj5CYXB0aXNtIFN1bmRheTwvc3Bhbj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJwaWxsIj5FYXN0ZXIgYXQgU09aTzwvc3Bhbj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJwaWxsIj5DaHJpc3RtYXMgYXQgU09aTzwvc3Bhbj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJwaWxsIj5WQlM8L3NwYW4+CiAgICAgICAgICA8c3BhbiBjbGFzcz0icGlsbCI+RmVlZCBBIEZhbWlseTwvc3Bhbj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJwaWxsIj5MRUdBQ1kgQ29uZmVyZW5jZTwvc3Bhbj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJwaWxsIj5NZW4mcnNxdW87cyBDYW1wb3V0PC9zcGFuPgogICAgICAgICAgPHNwYW4gY2xhc3M9InBpbGwiPldvcnNoaXAgTmlnaHRzPC9zcGFuPgogICAgICAgICAgPHNwYW4gY2xhc3M9InBpbGwiPlByYXllciBXYWxrczwvc3Bhbj4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2IGNsYXNzPSJjdGEtYmFuZCByZXZlYWwiIHN0eWxlPSJtYXJnaW4tdG9wOjIuNXJlbSI+CiAgICAgICAgICA8ZGl2PgogICAgICAgICAgICA8cCBjbGFzcz0iZXllYnJvdyI+RXZlbnRzIGF0IFNPWk88L3A+CiAgICAgICAgICAgIDxoMj5Db21lIHRvIG9uZS4gSG9zdCBvbmUuPC9oMj4KICAgICAgICAgICAgPHA+SG93ZXZlciB5b3Ugc2hvdyB1cCAmbWRhc2g7IGluIHRoZSBjcm93ZCBvciBvbiB0aGUgc3RhZ2UgJm1kYXNoOyB0aGVyZSZyc3F1bztzIGEgcGxhY2UgZm9yIHlvdSBoZXJlLjwvcD4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0iY3RhLWJhbmQtYWN0aW9ucyI+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImJ0bi1yb3ciPgogICAgICAgICAgICAgIDxhIGNsYXNzPSJidG4gYnRuLXByaW1hcnkiIGhyZWY9ImNvbnRhY3QuaHRtbCI+R2V0IGNvbm5lY3RlZDwvYT4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICA8L3NlY3Rpb24+CiAgPC9tYWluPgoKICA8Zm9vdGVyIGNsYXNzPSJzaXRlLWZvb3RlciI+CiAgICA8ZGl2IGNsYXNzPSJ3cmFwIj4KICAgICAgPGRpdiBjbGFzcz0iZm9vdGVyLWdyaWQiPgogICAgICAgIDxkaXY+CiAgICAgICAgICA8aDM+U09aTyBMb3ZlbGFuZDwvaDM+CiAgICAgICAgICA8cD45NzgxIEZpZWxkcyBFcnRlbCBSb2FkPGJyPkxvdmVsYW5kLCBPSCA0NTE0MDwvcD4KICAgICAgICAgIDxwPlN1bmRheXMgJm1pZGRvdDsgMTBBTSZuZGFzaDsxMlBNPGJyPlNPWk8gS2lkcyBjaGVjay1pbiBmcm9tIDEwOjE1IEFNPC9wPgogICAgICAgIDwvZGl2PgogICAgICAgIDxkaXY+CiAgICAgICAgICA8aDM+RXhwbG9yZTwvaDM+CiAgICAgICAgICA8cD48YSBocmVmPSJ2aXNpdC5odG1sIj5QbGFuIFlvdXIgVmlzaXQ8L2E+PGJyPjxhIGhyZWY9InNlcm1vbnMuaHRtbCI+TWVzc2FnZXM8L2E+PGJyPjxhIGhyZWY9Im1pbmlzdHJpZXMuaHRtbCI+TWluaXN0cmllczwvYT48YnI+PGEgaHJlZj0iZXZlbnRzLmh0bWwiPkV2ZW50czwvYT48L3A+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdj4KICAgICAgICAgIDxoMz5Db25uZWN0PC9oMz4KICAgICAgICAgIDxwPjxhIGhyZWY9ImdpdmUuaHRtbCI+Q29udHJpYnV0ZTwvYT48YnI+PGEgaHJlZj0iY29udGFjdC5odG1sIj5Db250YWN0PC9hPjxicj48YSBocmVmPSJwcmF5ZXIuaHRtbCI+TGV0JnJzcXVvO3MgUHJheTwvYT48YnI+PGEgaHJlZj0ibGVhZGVyc2hpcC5odG1sIj5MZWFkZXJzaGlwPC9hPjwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgY2xhc3M9ImZvb3Rlci1ib3R0b20iPgogICAgICAgIDxzcGFuPiZjb3B5OyA8c3BhbiBkYXRhLXllYXI+MjAyNjwvc3Bhbj4gU09aTyBMb3ZlbGFuZC4gQWxsIHJpZ2h0cyByZXNlcnZlZC48L3NwYW4+CiAgICAgICAgPHNwYW4+Q3JhZnRlZCBieSA8YSBocmVmPSJodHRwczovL3N0ZXZlcGVlbGVpaS5jb20iPlNQSUk8L2E+PC9zcGFuPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogIDwvZm9vdGVyPgoKICA8c2NyaXB0IHNyYz0ianMvbWFpbi5qcyI+PC9zY3JpcHQ+CiAgPHNjcmlwdCBzcmM9ImpzL21hZ2ljLmpzIj48L3NjcmlwdD4KICA8c2NyaXB0PgogIChmdW5jdGlvbigpewogICAgdmFyIGNoaXBzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnI3YtbmVlZHMgLmNoaXAnKTsKICAgIGNoaXBzLmZvckVhY2goZnVuY3Rpb24oYyl7IGMuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBmdW5jdGlvbigpewogICAgICBjLnNldEF0dHJpYnV0ZSgnYXJpYS1wcmVzc2VkJywgYy5nZXRBdHRyaWJ1dGUoJ2FyaWEtcHJlc3NlZCcpID09PSAndHJ1ZScgPyAnZmFsc2UnIDogJ3RydWUnKTsKICAgIH0pO30pOwogICAgdmFyIHN1Ym1pdCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd2LXN1Ym1pdCcpOwogICAgaWYgKHN1Ym1pdCkgc3VibWl0LmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgZnVuY3Rpb24oKXsKICAgICAgdmFyIHR5cGUgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndi10eXBlJykudmFsdWU7CiAgICAgIHZhciBkYXRlID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3YtZGF0ZScpLnZhbHVlIHx8ICdmbGV4aWJsZSBkYXRlJzsKICAgICAgdmFyIHdobyA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd2LW5hbWUnKS52YWx1ZSB8fCAn4oCUJzsKICAgICAgdmFyIG5lZWRzID0gQXJyYXkucHJvdG90eXBlLm1hcC5jYWxsKAogICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJyN2LW5lZWRzIC5jaGlwW2FyaWEtcHJlc3NlZD0idHJ1ZSJdJyksCiAgICAgICAgZnVuY3Rpb24oYyl7IHJldHVybiBjLnRleHRDb250ZW50OyB9KS5qb2luKCcsICcpIHx8ICdqdXN0IHRoZSByb29tJzsKICAgICAgdmFyIHVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Ytc3VtbWFyeScpOwogICAgICB1bC5pbm5lckhUTUwgPSAnJzsKICAgICAgWyAnRXZlbnQgdHlwZTogJyArIHR5cGUsICdQcmVmZXJyZWQgZGF0ZTogJyArIGRhdGUsICdOZWVkczogJyArIG5lZWRzLCAnRnJvbTogJyArIHdobyBdCiAgICAgICAgLmZvckVhY2goZnVuY3Rpb24odCl7IHZhciBsaSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2xpJyk7IGxpLnRleHRDb250ZW50ID0gdDsgdWwuYXBwZW5kQ2hpbGQobGkpOyB9KTsKICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3YtcmVzdWx0JykuY2xhc3NMaXN0LmFkZCgnc2hvdycpOwogICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndi1yZXN1bHQnKS5zY3JvbGxJbnRvVmlldyh7YmVoYXZpb3I6J3Ntb290aCcsIGJsb2NrOiduZWFyZXN0J30pOwogICAgfSk7CiAgfSkoKTsKICA8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+Cg==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events at SOZO — Gatherings &amp; Hosting | SOZO Loveland</title>
+  <meta name="description" content="What's coming up at SOZO Loveland — and how to host your concert, wedding, or gathering in our room. 9781 Fields Ertel Rd, Loveland OH.">
+  <meta property="og:title" content="Events at SOZO — SOZO Loveland">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/interior-5.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,560;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/sozo-logo.jpg">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="preview-banner">Preview &mdash; a concept rebuild of <strong>sozoloveland.com</strong>. Not the live site.</div>
+  <header class="site-header">
+    <div class="wrap nav-bar">
+      <a class="brand" href="index.html">
+        <img src="assets/sozo-logo.jpg" alt="SOZO Loveland logo" width="88" height="88">
+        <span class="brand-name">SOZO<small>Loveland</small></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">☰</button>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="visit.html">Visit</a></li>
+          <li><a href="sermons.html">Messages</a></li>
+          <li><a href="ministries.html">Ministries</a></li>
+          <li><a href="events.html" aria-current="page">Events</a></li>
+          <li><a href="give.html">Give</a></li>
+          <li><a href="prayer.html">Let&rsquo;s Pray</a></li>
+          <li><a href="give.html" class="nav-cta">Contribute</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Events at SOZO</p>
+        <h1>Gather. Go. Host.</h1>
+        <p class="lede" style="max-width:42rem">What&rsquo;s coming up in the next 30 days &mdash; and how this room can host your concert, wedding, or gathering.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#upcoming">What&rsquo;s coming up</a>
+          <a class="btn btn-ghost" href="#host">Host your event here</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="upcoming" style="scroll-margin-top:5rem">
+      <div class="wrap">
+        <p class="eyebrow">Next 30 Days</p>
+        <h2 style="max-width:36rem">Mark your calendar.</h2>
+        <div class="grid-3 reveal" style="margin-top:2.2rem">
+          <div class="card">
+            <img src="assets/event-watch-party.png" alt="SOZO Men's Watch Party — Bengals vs Ravens" loading="lazy" style="border-radius:10px;margin-bottom:1rem">
+            <p class="eyebrow">Sat, Oct 25 &middot; 1:00&ndash;4:00 PM</p>
+            <h3>SOZO Men Watch Party</h3>
+            <p>Bengals vs. Ravens &mdash; kicking off right after service. Good food, football, and good men. Bring a friend, bring an appetite.</p>
+            <p class="form-note">RSVP: text 513-646-1121</p>
+          </div>
+          <div class="card">
+            <img src="assets/event-glow-party.png" alt="Light the Night Glow Party" loading="lazy" style="border-radius:10px;margin-bottom:1rem">
+            <p class="eyebrow">Fri, Oct 30 &middot; 7:00&ndash;10:00 PM</p>
+            <h3>Light the Night Glow Party</h3>
+            <p>Youth glow party &mdash; neon, music, and friends. Come lit up.</p>
+          </div>
+          <div class="card">
+            <img src="assets/hero-welcome.jpg" alt="Sunday morning at SOZO Loveland" loading="lazy" style="border-radius:10px;margin-bottom:1rem">
+            <p class="eyebrow">Every Sunday &middot; 10AM&ndash;12PM</p>
+            <h3>Sunday Service</h3>
+            <p>Worship, practical teaching, and time to connect. SOZO Kids check-in from 10:15 AM. Every week, same open door.</p>
+            <a href="visit.html">Plan your visit &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="venue-dark" id="host" style="padding:4.5rem 0;scroll-margin-top:5rem">
+      <div class="wrap">
+        <p class="eyebrow">Host Your Event Here</p>
+        <h2 style="max-width:38rem">This room does more than Sundays.</h2>
+        <p style="max-width:44rem">SOZO Loveland&rsquo;s sanctuary re-lights beautifully &mdash; warm wood, real acoustics, and a room that makes every gathering feel like an occasion. One package: the room, concert-grade sound, and a live engineer.</p>
+        <div class="spec-grid">
+          <div class="spec-card">
+            <h3>The Room</h3>
+            <p>A warm sanctuary with real character &mdash; flexible seating, natural acoustics, and lighting that shifts from Sunday morning to Saturday night.</p>
+          </div>
+          <div class="spec-card">
+            <h3>The Sound</h3>
+            <p>Concert-grade PA, tuned to the room. Your artists and speakers heard the way they deserve &mdash; clear, warm, and present.</p>
+          </div>
+          <div class="spec-card">
+            <h3>The Engineer</h3>
+            <p>A live production engineer on site from load-in to load-out. Mix, monitors, and calm under pressure &mdash; included, not upsold.</p>
+          </div>
+        </div>
+        <div class="spec-chips">
+          <span class="spec-chip">Concerts</span>
+          <span class="spec-chip">Weddings</span>
+          <span class="spec-chip">Conferences</span>
+          <span class="spec-chip">Community gatherings</span>
+          <span class="spec-chip">Album releases</span>
+        </div>
+        <div style="margin-top:2.5rem">
+          <p class="eyebrow">Drag the handle</p>
+          <h3 style="font-family:var(--serif);font-size:1.5rem;margin-bottom:1rem">Sunday morning to Saturday night.</h3>
+          <div class="ba-wrap" id="venue-ba">
+            <img src="assets/interior-1.jpg" alt="The SOZO Loveland sanctuary on a Sunday morning" loading="lazy">
+            <div class="ba-after" id="ba-after">
+              <img src="assets/interior-5.jpg" alt="The SOZO Loveland sanctuary set for an evening event" loading="lazy">
+            </div>
+            <span class="ba-label before">SUNDAY MORNING</span>
+            <span class="ba-label after">EVENT NIGHT</span>
+            <div class="ba-handle" id="ba-handle"><span class="ba-knob">&leftrightarrow;</span></div>
+          </div>
+        </div>
+        <div class="grid-3" style="margin-top:2.5rem">
+          <div><img src="assets/interior-2.jpg" alt="Previous engagement at SOZO Loveland" loading="lazy" style="border-radius:12px"></div>
+          <div><img src="assets/interior-3.jpg" alt="Previous engagement at SOZO Loveland" loading="lazy" style="border-radius:12px"></div>
+          <div><img src="assets/groups.jpg" alt="Community gathering at SOZO Loveland" loading="lazy" style="border-radius:12px"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="inquire" style="background:var(--cream-2);scroll-margin-top:5rem">
+      <div class="wrap">
+        <p class="eyebrow">Check Your Date</p>
+        <h2 style="max-width:36rem">Tell us about your event.</h2>
+        <p class="section-lede">Three quick answers and we&rsquo;ll come back with availability. No pressure, no runaround.</p>
+        <div class="concierge">
+          <div class="concierge-grid">
+            <div class="field">
+              <label for="v-type">Event type</label>
+              <select id="v-type">
+                <option>Concert / live music</option>
+                <option>Wedding / ceremony</option>
+                <option>Conference / workshop</option>
+                <option>Community gathering</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="v-date">Preferred date</label>
+              <input id="v-date" type="date">
+            </div>
+          </div>
+          <div class="field">
+            <label>What do you need?</label>
+            <div class="chip-row" id="v-needs">
+              <button type="button" class="chip" aria-pressed="false">Sound + engineer</button>
+              <button type="button" class="chip" aria-pressed="false">Lighting</button>
+              <button type="button" class="chip" aria-pressed="false">Livestream</button>
+              <button type="button" class="chip" aria-pressed="false">Hospitality team</button>
+              <button type="button" class="chip" aria-pressed="false">Rehearsal time</button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="v-name">Your name &amp; email</label>
+            <input id="v-name" type="text" placeholder="Jane Doe — jane@example.com">
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-primary" id="v-submit" type="button">Build my inquiry &rarr;</button>
+          </div>
+          <div class="plan-result" id="v-result" aria-live="polite">
+            <h4>Your inquiry, ready to send:</h4>
+            <ol id="v-summary"></ol>
+            <div class="btn-row">
+              <a class="btn btn-dark" id="v-send" href="contact.html">Send it to the events team &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Every Week</p>
+        <h2>Our regular rhythms.</h2>
+        <div class="grid-3 reveal" style="margin-top:2.2rem">
+          <div class="card">
+            <h3>Sunday Service</h3>
+            <p><strong>Sundays &middot; 10AM&ndash;12PM</strong><br>Worship, practical teaching, and time to connect. SOZO Kids check-in from 10:15 AM.</p>
+            <a href="visit.html">Plan your visit &rarr;</a>
+          </div>
+          <div class="card">
+            <h3>SOZO Groups</h3>
+            <p><strong>Men&rsquo;s &amp; Women&rsquo;s groups</strong><br>Gatherings across the generations &mdash; fellowship, conversation, and closer connection.</p>
+            <a href="ministries.html#groups">Learn more &rarr;</a>
+          </div>
+          <div class="card">
+            <h3>SOZO Youth</h3>
+            <p><strong>Students</strong><br>Summer hangs, movie nights, fall events &mdash; a place where students belong and grow.</p>
+            <a href="ministries.html#groups">Learn more &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--cream-2);padding-top:0">
+      <div class="wrap">
+        <p class="eyebrow">Through the Year</p>
+        <h2>Signature gatherings.</h2>
+        <div class="pill-row" style="margin-top:1.6rem">
+          <span class="pill">Baptism Sunday</span>
+          <span class="pill">Easter at SOZO</span>
+          <span class="pill">Christmas at SOZO</span>
+          <span class="pill">VBS</span>
+          <span class="pill">Feed A Family</span>
+          <span class="pill">LEGACY Conference</span>
+          <span class="pill">Men&rsquo;s Campout</span>
+          <span class="pill">Worship Nights</span>
+          <span class="pill">Prayer Walks</span>
+        </div>
+        <div class="cta-band reveal" style="margin-top:2.5rem">
+          <div>
+            <p class="eyebrow">Events at SOZO</p>
+            <h2>Come to one. Host one.</h2>
+            <p>However you show up &mdash; in the crowd or on the stage &mdash; there&rsquo;s a place for you here.</p>
+          </div>
+          <div class="cta-band-actions">
+            <div class="btn-row">
+              <a class="btn btn-primary" href="contact.html">Get connected</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h3>SOZO Loveland</h3>
+          <p>9781 Fields Ertel Road<br>Loveland, OH 45140</p>
+          <p>Sundays &middot; 10AM&ndash;12PM<br>SOZO Kids check-in from 10:15 AM</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <p><a href="visit.html">Plan Your Visit</a><br><a href="sermons.html">Messages</a><br><a href="ministries.html">Ministries</a><br><a href="events.html">Events</a></p>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <p><a href="give.html">Contribute</a><br><a href="contact.html">Contact</a><br><a href="prayer.html">Let&rsquo;s Pray</a><br><a href="leadership.html">Leadership</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> SOZO Loveland. All rights reserved.</span>
+        <span>Crafted by <a href="https://stevepeeleii.com">SPII</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/magic.js"></script>
+  <script>
+  (function(){
+    var chips = document.querySelectorAll('#v-needs .chip');
+    chips.forEach(function(c){ c.addEventListener('click', function(){
+      c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+    });});
+    var submit = document.getElementById('v-submit');
+    if (submit) submit.addEventListener('click', function(){
+      var type = document.getElementById('v-type').value;
+      var date = document.getElementById('v-date').value || 'flexible date';
+      var who = document.getElementById('v-name').value || '—';
+      var needs = Array.prototype.map.call(
+        document.querySelectorAll('#v-needs .chip[aria-pressed="true"]'),
+        function(c){ return c.textContent; }).join(', ') || 'just the room';
+      var ul = document.getElementById('v-summary');
+      ul.innerHTML = '';
+      [ 'Event type: ' + type, 'Preferred date: ' + date, 'Needs: ' + needs, 'From: ' + who ]
+        .forEach(function(t){ var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
+      document.getElementById('v-result').classList.add('show');
+      document.getElementById('v-result').scrollIntoView({behavior:'smooth', block:'nearest'});
+    });
+  })();
+  </script>
+</body>
+</html>
