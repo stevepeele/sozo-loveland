@@ -53,8 +53,7 @@
         <div>
           <p class="eyebrow">Send a Message</p>
           <h2>Ask us anything.</h2>
-          <!-- BACKEND PLX-403: wire form delivery to contact@sozoloveland.com -->
-          <form id="contact-form" action="#" method="post" data-endpoint="/api/contact" onsubmit="return contactPlaceholder(event)">
+          <form id="contact-form" action="https://formsubmit.co/contact@sozoloveland.com" method="POST">
             <div class="form-field">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" required autocomplete="name">
@@ -71,16 +70,45 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" required></textarea>
             </div>
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_subject" value="New message from the SOZO website">
+            <input type="hidden" name="_template" value="table">
             <button class="btn btn-primary" type="submit">Send Message</button>
-            <p class="form-note" id="contact-note" style="margin-top:0.8rem">Messages deliver to <strong>contact@sozoloveland.com</strong> once the form is wired. Prefer to talk? Call <strong>(513) 677-8500</strong>.</p>
+            <p class="form-note" id="contact-note" style="margin-top:0.8rem">Messages go straight to <strong>contact@sozoloveland.com</strong>. Prefer to talk? Call <strong>(513) 677-8500</strong>.</p>
           </form>
           <script>
-            function contactPlaceholder(e) {
-              e.preventDefault();
-              document.getElementById("contact-note").textContent =
-                "Thanks — your message is noted. The form will deliver to contact@sozoloveland.com once wiring is complete.";
-              return false;
-            }
+            (function () {
+              "use strict";
+              var form = document.getElementById("contact-form");
+              var note = document.getElementById("contact-note");
+              form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                var btn = form.querySelector('button[type="submit"]');
+                btn.disabled = true;
+                btn.textContent = "Sending\u2026";
+                fetch("https://formsubmit.co/ajax/contact@sozoloveland.com", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                  body: JSON.stringify({
+                    name: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    topic: document.getElementById("topic").value,
+                    message: document.getElementById("message").value,
+                    _subject: "New message from the SOZO website",
+                    _honey: ""
+                  })
+                }).then(function (r) {
+                  if (!r.ok) throw new Error("send failed");
+                  form.reset();
+                  note.textContent = "Thanks \u2014 your message is on its way. We\u2019ll be in touch soon.";
+                }).catch(function () {
+                  note.innerHTML = "Something didn\u2019t send right \u2014 please email <strong>contact@sozoloveland.com</strong> directly.";
+                }).finally(function () {
+                  btn.disabled = false;
+                  btn.textContent = "Send Message";
+                });
+              });
+            })();
           </script>
         </div>
         <div>
