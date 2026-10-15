@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Let’s Pray — SOZO Loveland</title>
+<title>Prayer Room — SOZO Loveland</title>
 <meta name="description" content="Light a candle. Leave what's heavy. Take a word with you. The SOZO Loveland prayer room.">
 <link rel="icon" type="image/jpeg" href="/assets/sozo-logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,19 +73,19 @@
           <li><a href="/ministries">Ministries</a></li>
           <li><a href="/venue">The Venue</a></li>
           <li><a href="/events">Events</a></li>
-          <li><a href="/give">Give</a></li>
-          <li><a href="/prayer" aria-current="page">Let&rsquo;s Pray</a></li>
-          <li><a href="/visit" class="nav-cta">Plan Your Visit</a></li>
+          <li><a href="/contribute">Contribute</a></li>
+          <li><a href="/prayer" aria-current="page">Prayer Room</a></li>
+          <li><a href="/reverend-peele" class="nav-cta">Meet the Pastor</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="room" aria-label="Let’s Pray">
+    <section class="room" aria-label="Prayer Room">
       <!-- STEP 1: topic -->
       <div class="room-step on" id="step-topic">
-        <p class="eyebrow" style="color:var(--glow)">Let’s Pray</p>
+        <p class="eyebrow" style="color:var(--glow)">Prayer Room</p>
         <h1>What's heavy tonight?</h1>
         <p class="lede">No account. No audience. Just you, a candle, and a God who listens. Pick what's on your heart.</p>
         <div class="topic-grid" id="topics"></div>
@@ -138,7 +138,7 @@
         </div>
         <div>
           <h3>Connect</h3>
-          <p><a href="/give">Contribute</a><br><a href="/contact">Contact</a><br><a href="/about">Our Vision</a><br><a href="/leadership">Leadership</a></p>
+          <p><a href="/contribute">Contribute</a><br><a href="/contact">Contact</a><br><a href="/about">Our Vision</a><br><a href="/leadership">Leadership</a></p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -251,7 +251,7 @@
     var w = WORDS[topic];
     ctx.textAlign = "center"; ctx.fillStyle = "#f0b35c";
     ctx.font = "600 30px Inter, sans-serif";
-    ctx.fillText("LET’S PRAY", W/2, 120);
+    ctx.fillText("PRAYER ROOM", W/2, 120);
     ctx.fillStyle = "#f7efdc"; ctx.font = "600 52px Georgia, serif";
     var y = wrapText(ctx, "\u201C"+w.verse+"\u201D", W/2, H*0.52, W-160, 72);
     ctx.fillStyle = "#f0b35c"; ctx.font = "600 30px Inter, sans-serif";
