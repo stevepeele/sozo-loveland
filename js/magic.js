@@ -13,18 +13,18 @@
 
   /* ================= command palette ("Ask Sozo") ================= */
   var INDEX = [
-    {t:"Plan Your Visit", d:"Sundays 10AM–12PM · 9781 Fields Ertel Rd, Loveland", h:"visit.html", k:"visit plan sunday come new here first time"},
-    {t:"Messages — Message Tracks", d:"Series as albums, messages as tracks. Press play.", h:"sermons.html", k:"messages sermons tracks series watch listen archive"},
-    {t:"The Kingdom At Hand — current series", d:"3 tracks · what we're teaching now", h:"sermons.html#current", k:"kingdom current series now"},
-    {t:"What's the Gospel? — start here", d:"The good news, plainly. New to faith? Start here.", h:"sermons.html#gospel", k:"gospel faith new jesus saved start"},
-    {t:"Ministries — find your people", d:"SOZO Kids, Groups, Worship, Outreach", h:"ministries.html", k:"ministries kids groups worship outreach serve youth"},
-    {t:"SOZO Kids", d:"Nursery through 6th grade · check-in from 10:15 AM", h:"ministries.html#kids", k:"kids children nursery family"},
-    {t:"The Venue — book the room", d:"Room + concert-grade sound + engineer, one package", h:"venue.html", k:"venue book rent concert wedding event space"},
-    {t:"Events — gather, grow, go", d:"Men's Watch Party 10/25 · Glow Party 10/30", h:"events.html", k:"events calendar party watch"},
-    {t:"Contribute", d:"Fuel the mission", h:"contribute.html", k:"contribute give donate offering tithe"},
-    {t:"Contact — say hello", d:"Questions, prayer, or just to talk", h:"contact.html", k:"contact hello prayer question talk email"},
-    {t:"Our Vision — Open. Embrace. Link.", d:"The journey we're on together", h:"about.html", k:"vision about believe values open embrace link"},
-    {t:"Leadership — meet our pastors", d:"The people who'll greet you at the door", h:"leadership.html", k:"leadership pastors steve tara staff"}
+    {t:"Plan Your Visit", d:"Sundays 10AM–12PM · 9781 Fields Ertel Rd, Loveland", h:"visit", k:"visit plan sunday come new here first time"},
+    {t:"Messages — Message Tracks", d:"Series as albums, messages as tracks. Press play.", h:"sermons", k:"messages sermons tracks series watch listen archive"},
+    {t:"The Kingdom At Hand — current series", d:"3 tracks · what we're teaching now", h:"sermons#current", k:"kingdom current series now"},
+    {t:"What's the Gospel? — start here", d:"The good news, plainly. New to faith? Start here.", h:"sermons#gospel", k:"gospel faith new jesus saved start"},
+    {t:"Ministries — find your people", d:"SOZO Kids, Groups, Worship, Outreach", h:"ministries", k:"ministries kids groups worship outreach serve youth"},
+    {t:"SOZO Kids", d:"Nursery through 6th grade · check-in from 10:15 AM", h:"ministries#kids", k:"kids children nursery family"},
+    {t:"The Venue — book the room", d:"Room + concert-grade sound + engineer, one package", h:"venue", k:"venue book rent concert wedding event space"},
+    {t:"Events — gather, grow, go", d:"Men's Watch Party 10/25 · Glow Party 10/30", h:"events", k:"events calendar party watch"},
+    {t:"Contribute", d:"Fuel the mission", h:"contribute", k:"contribute give donate offering tithe"},
+    {t:"Contact — say hello", d:"Questions, prayer, or just to talk", h:"contact", k:"contact hello prayer question talk email"},
+    {t:"Our Vision — Open. Embrace. Link.", d:"The journey we're on together", h:"about", k:"vision about believe values open embrace link"},
+    {t:"Leadership — meet our pastors", d:"The people who'll greet you at the door", h:"leadership", k:"leadership pastors steve tara staff"}
   ];
 
   var palette, palInput, palList, palOpen = false, palSel = 0, palItems = INDEX.slice();
@@ -145,21 +145,21 @@
     var steps = [];
     if (bring === 3){ // planning an event
       return { title:"Your venue path",
-        steps:[["Tour the room","venue.html","See the space, the sound, and what's included"],
-               ["Check your date","venue.html#inquire","Three quick answers — we'll come back with a quote"]] };
+        steps:[["Tour the room","venue","See the space, the sound, and what's included"],
+               ["Check your date","venue#inquire","Three quick answers — we'll come back with a quote"]] };
     }
     if (want === 0){
-      steps.push(["Start the current track","sermons.html#current","“The Kingdom At Hand” — 3 messages, start at track 01"]);
+      steps.push(["Start the current track","sermons#current","“The Kingdom At Hand” — 3 messages, start at track 01"]);
     } else if (want === 2){
-      steps.push(["Find your team","ministries.html","Worship, kids, outreach — there's a seat with your name on it"]);
+      steps.push(["Find your team","ministries","Worship, kids, outreach — there's a seat with your name on it"]);
     } else {
-      steps.push(["Come this Sunday","visit.html","10AM–12PM · we'll meet you at the door"]);
+      steps.push(["Come this Sunday","visit","10AM–12PM · we'll meet you at the door"]);
     }
-    if (bring === 0) steps.push(["The gospel, plainly","sermons.html#gospel","“What's the Gospel?” — start at the beginning"]);
-    if (who === 2 || who === 1) steps.push(["SOZO Kids","ministries.html#kids","Nursery through 6th grade · check-in from 10:15 AM"]);
-    if (want === 1) steps.push(["SOZO Groups","ministries.html#groups","Men's, women's, youth — life is better together"]);
-    if (!steps.length) steps.push(["Plan your visit","visit.html","Tell us you're coming — we'll handle the rest"]);
-    steps.push(["Plan your visit","visit.html","Sundays 10AM–12PM · 9781 Fields Ertel Rd"]);
+    if (bring === 0) steps.push(["The gospel, plainly","sermons#gospel","“What's the Gospel?” — start at the beginning"]);
+    if (who === 2 || who === 1) steps.push(["SOZO Kids","ministries#kids","Nursery through 6th grade · check-in from 10:15 AM"]);
+    if (want === 1) steps.push(["SOZO Groups","ministries#groups","Men's, women's, youth — life is better together"]);
+    if (!steps.length) steps.push(["Plan your visit","visit","Tell us you're coming — we'll handle the rest"]);
+    steps.push(["Plan your visit","visit","Sundays 10AM–12PM · 9781 Fields Ertel Rd"]);
     // de-dupe by href, keep first 3
     var seen = {}, out = [];
     steps.forEach(function(s){ if(!seen[s[1]]){ seen[s[1]]=1; out.push(s); } });
@@ -255,7 +255,7 @@
         '<span class="tick-main">Next gathering <strong>Sunday 10AM</strong> — in <strong class="tick-count">'+fmt(left)+'</strong></span>' +
         '<span class="tick-sep">·</span>' +
         '<span class="tick-ev">'+TICKER_EVENTS[ev % TICKER_EVENTS.length]+'</span>' +
-        '<a class="tick-cta" href="visit.html">Plan your visit →</a>';
+        '<a class="tick-cta" href="/visit">Plan your visit →</a>';
     }
     render();
     setInterval(render, 1000);
@@ -298,7 +298,7 @@
         r.innerHTML = '<p class="eyebrow">Received</p><h3>Thanks, '+safeName+' — we\'ve got it.</h3>' +
           (msg ? '<p class="comp-quote">“'+msg.replace(/</g,"&lt;")+'”</p>' : '') +
           '<p>Someone from the SOZO family will follow up. If it\'s urgent, reach out directly:</p>' +
-          '<div class="btn-row"><a class="btn btn-dark" href="contact.html">Contact us →</a>' +
+          '<div class="btn-row"><a class="btn btn-dark" href="/contact">Contact us →</a>' +
           '<button class="btn btn-ghost" id="cc-again">Write another</button></div>';
         root.appendChild(r);
         r.querySelector("#cc-again").addEventListener("click", render);
