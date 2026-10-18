@@ -474,3 +474,34 @@ p { margin: 0 0 1em; }
 .skip-link:focus { left: 1rem; top: 1rem; }
 :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- 24. mobile refinement (Steve's 2026-10-15 order) ---------- */
+@media (max-width: 640px) {
+  /* Ask Sozo pill: collapse to a circular button so it never covers CTAs */
+  .pal-pill {
+    right: 1rem; bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    width: 3.2rem; height: 3.2rem; padding: 0;
+    border-radius: 50%; justify-content: center; gap: 0;
+    font-size: 0;
+  }
+  .pal-pill .pal-pill-k { font-size: 1.05rem; padding: 0; background: none; }
+
+  /* Hero rethink for mobile */
+  .porch-hero { min-height: 82vh; }
+  .porch-hero-scrim {
+    background: linear-gradient(180deg,
+      rgba(20,12,6,0.35) 0%,
+      rgba(20,12,6,0.15) 30%,
+      rgba(20,12,6,0.55) 62%,
+      rgba(20,12,6,0.88) 100%);
+  }
+  .porch-hero-inner { padding-bottom: 3.2rem; }
+  .porch-hero h1 { font-size: clamp(2.4rem, 11vw, 3rem); line-height: 1.05; }
+  .porch-hero .lede { font-size: 1.05rem; line-height: 1.55; color: #f7ecd8; }
+  .porch-hero .btn-row { flex-direction: column; align-items: stretch; }
+  .porch-hero .btn-row .btn { text-align: center; padding: 0.95rem 1.2rem; }
+  .porch-hero-note { font-size: 0.85rem; }
+
+  /* Sticky header shouldn't clip section tops */
+  section[id], div[id] { scroll-margin-top: 5.5rem; }
+}
