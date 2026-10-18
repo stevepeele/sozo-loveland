@@ -32,7 +32,7 @@
       wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/live_stream?channel='+LIVE_STREAM_CHANNEL_ID+'&autoplay=1&rel=0" title="SOZO Loveland live" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
       btns.parentNode.insertBefore(wrap, btns);
     }
-    if (btns) btns.innerHTML = '<a class="btn btn-primary" href="https://maps.google.com/?q=9781+Fields+Ertel+Rd+Loveland+OH+45140" target="_blank" rel="noopener">Get Directions</a><a class="btn btn-ghost" href="prayer.html">Light a candle \u2192</a>';
+    if (btns) btns.innerHTML = '<a class="btn btn-primary" href="https://maps.google.com/?q=9781+Fields+Ertel+Rd+Loveland+OH+45140" target="_blank" rel="noopener">Get Directions</a><a class="btn btn-ghost" href="/prayer">Light a candle \u2192</a>';
     var note = inner.querySelector(".porch-hero-note");
     if (note) note.textContent = "Sundays 10AM\u201312PM \u00B7 9781 Fields Ertel Rd, Loveland, OH";
   }
