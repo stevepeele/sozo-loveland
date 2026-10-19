@@ -34,6 +34,10 @@ function _initPostHog() {
     api_host: POSTHOG_HOST,
     autocapture: false,
     capture_pageview: false,
+    /* Belt: array.js loads async — also fire the pageview when it's ready.
+       Do NOT depend on this callback (it proved unreliable with the snippet
+       pattern); the polling flusher below is the real mechanism. */
+    loaded: function () { _flushPageview(); },
   });
 }
 
@@ -57,5 +61,25 @@ function identify(userId, traits) {
   } catch (e) {}
 }
 
-/* $pageview on load */
-track("$pageview", { path: location.pathname });
+/* $pageview on load — via the polling flusher, NOT at script eval.
+   Firing capture() on the array stub at eval time silently drops the event
+   (array.js loads async). _flushPageview polls until capture is real. */
+var _pageviewWanted = false;
+var _pageviewFired = false;
+var _pageviewTries = 0;
+function _flushPageview() {
+  if (!_pageviewWanted || _pageviewFired) return;
+  try {
+    if (window.posthog && typeof window.posthog.capture === "function") {
+      window.posthog.capture("$pageview",
+        Object.assign({ app: APP_ID }, { path: location.pathname }));
+      _pageviewFired = true;
+      return;
+    }
+  } catch (e) { /* analytics must never break the app */ }
+  if (++_pageviewTries < 60) setTimeout(_flushPageview, 500);
+}
+
+_initPostHog();
+_pageviewWanted = true;
+_flushPageview();
