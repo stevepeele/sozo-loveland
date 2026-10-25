@@ -1,4 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "buildCommand": "sh scripts/write-config.sh",
+  "outputDirectory": "."
 }

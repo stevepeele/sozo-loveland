@@ -1,2 +1,4 @@
-/* Sozo Loveland — site config. PostHog key filled by Lauren when issued. */
-window.SOZO_CONFIG = { posthogKey: "phc_tN5yyT4HZcxr9XWPnMrEtPrD7gH2rnDiV59BKJsVwirX" };
+/* Sozo Loveland — site config. Generated at build time from env vars
+   POSTHOG_KEY and SEGMENT_WRITE_KEY (see scripts/write-config.sh).
+   Empty values = analytics disabled. Never hard-code keys here. */
+window.SOZO_CONFIG = { posthogKey: "", segmentKey: "" };
