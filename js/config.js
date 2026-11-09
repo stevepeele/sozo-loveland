@@ -1,4 +1,4 @@
-/* Sozo Loveland — site config. Generated at build time from env vars
-   POSTHOG_KEY and SEGMENT_WRITE_KEY (see scripts/write-config.sh).
-   Empty values = analytics disabled. Never hard-code keys here. */
-window.SOZO_CONFIG = { posthogKey: "", segmentKey: "" };
+/* Sozo Loveland (SPIIX-1227): site config moved to the standard PostHog
+   loader config (window.__SPIIX_CFG__ inline in each page). This file is
+   kept only so stale cached pages no-op instead of erroring. */
+window.SOZO_CONFIG = {};
